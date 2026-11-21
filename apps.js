@@ -79,7 +79,7 @@
       }
     },
     {
-      id: 'eiken', category: 'study', icon: true, manual: false,
+      id: 'eiken', category: 'study', icon: true, manual: true,
       shots: [['1', 'ホーム', 'Home'], ['2', '単語', 'Vocabulary'], ['3', '筆記と解説', 'Reading and explanations'], ['4', 'リスニング', 'Listening']], enShots: true,
       name: { ja: '英検トレーナー', en: 'Eiken Trainer' },
       desc: {
