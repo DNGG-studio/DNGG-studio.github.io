@@ -4,23 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>使い方 - カレンダープラスα（カレンダープラスアルファ）</title>
-<meta name="description" content="カレンダープラスα（カレンダープラスアルファ）の使い方。Google アカウントのつなぎ方、予定の作り方、画像・ファイルの添付、天気、ウィジェット。">
+<meta name="description" content="カレンダープラスα（カレンダープラスアルファ）の使い方。画面の画像つきで、Google アカウントのつなぎ方、予定の作り方、画像・ファイルの添付、天気、ウィジェットを説明します。">
 <link rel="icon" href="images/icon.png">
-<style>body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.5em}img{max-width:100%;height:auto}.shot{display:block;max-width:240px;border-radius:8px;margin:12px 0}.toc{background:#f5f5f5;border-radius:8px;padding:12px 16px 12px 36px}.note{font-size:.9em;color:#555}.tip{background:#eef5ff;border-left:4px solid #4285f4;padding:8px 12px;margin:12px 0}ol li,ul li{margin:.2em 0}</style>
+<style>
+body{font-family:sans-serif;max-width:760px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}
+h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.4em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.6em}
+img{max-width:100%;height:auto}
+.toc{background:#f5f5f5;border-radius:8px;padding:12px 16px 12px 36px}
+.note{font-size:.9em;color:#555}
+.tip{background:#eef5ff;border-left:4px solid #4285f4;padding:8px 12px;margin:12px 0}
+.warn{background:#fff6e5;border-left:4px solid #f29900;padding:8px 12px;margin:12px 0}
+ol li,ul li{margin:.2em 0}
+.figs{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px}
+figure{margin:0;width:250px;max-width:100%}
+figure img{display:block;width:100%;border:1px solid #ddd;border-radius:10px}
+figcaption{font-size:.88em;color:#444;margin-top:6px;line-height:1.55}
+.n{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;border-radius:50%;background:#e53935;color:#fff;font-size:.8em;font-weight:bold;text-align:center;margin-right:2px}
+</style>
 </head>
 <body>
-<p><a href="./">カレンダープラスα の紹介ページへ戻る</a></p>
+<p><a href="./">カレンダープラスα の紹介ページへ戻る</a> ・ <a href="../">DNGG-studio のアプリ一覧</a></p>
 <h1>カレンダープラスα の使い方</h1>
 <p>カレンダープラスα（カレンダープラスアルファ）は、あなたの Google カレンダーの予定をそのまま表示・編集し、画像・ファイルの添付や天気など「Google カレンダーのアプリにない機能」を足すアプリです。予定はすべてあなたの Google カレンダーに保存されるので、パソコンやほかのアプリからも同じ予定が見えます。</p>
-<p class="note">この説明は バージョン 0.1.1 の画面に合わせています（2026年11月22日）。画面はこれから変わることがあります。</p>
+<p>画像の<span class="n">1</span>のような赤い番号は、押すところと、説明の番号です。</p>
+<p class="note">この説明は バージョン 0.1.1 の画面に合わせています（2026年11月22日）。画面はこれから変わることがあります。画像の予定はすべて見本です。</p>
 
 <ol class="toc">
 <li><a href="#start">はじめに：Google アカウントでつなぐ</a></li>
-<li><a href="#views">カレンダーを見る（月・3週・週・日）</a></li>
+<li><a href="#views">画面の見方と切り替え</a></li>
 <li><a href="#edit">予定を作る・直す・消す</a></li>
+<li><a href="#repeat">繰り返しの予定</a></li>
 <li><a href="#move">予定を長押しで動かす</a></li>
-<li><a href="#images">説明欄に画像を入れる・ファイルを添付する</a></li>
-<li><a href="#share">ほかのアプリから「共有」で添付する</a></li>
+<li><a href="#images">説明欄に画像を入れる</a></li>
+<li><a href="#attach">ファイルを添付する</a></li>
 <li><a href="#place">場所と「ここに行く」</a></li>
 <li><a href="#colors">色分けに名前を付ける・絞り込む</a></li>
 <li><a href="#weather">天気を出す（日本国内）</a></li>
@@ -30,75 +46,98 @@
 </ol>
 
 <h2 id="start">1. はじめに：Google アカウントでつなぐ</h2>
+<p>はじめて開くと、試しの予定が出ています。あなたの予定を出すには、Google アカウントでつなぎます。</p>
+<div class="figs">
+<figure><img src="images/manual/connect-1.jpg" width="540" height="1200" loading="lazy" alt="はじめての画面。上に「Google アカウントでつなぐ」のボタン"><figcaption>上の「Google アカウントでつなぐ」を押します</figcaption></figure>
+<figure><img src="images/manual/connect-2.jpg" width="540" height="1200" loading="lazy" alt="アカウントの選択"><figcaption><span class="n">1</span>使う Google アカウントを選び、<span class="n">2</span>「OK」を押します（画像ではメールアドレスを隠しています）</figcaption></figure>
+</div>
 <ol>
-<li>アプリを開き、「Google アカウントでつなぐ」を押します</li>
-<li>端末にログインしている Google アカウントを選びます</li>
+<li>上の「Google アカウントでつなぐ」を押します</li>
+<li>端末にログインしている Google アカウントを選んで「OK」を押します</li>
 <li>カレンダーとドライブの許可を求める画面が出るので、内容を確かめて「続行」「許可」を押します</li>
 </ol>
-<div class="tip">「Google はこのアプリを確認していません」という画面が出たときは、Google の確認がまだ終わっていないためです。「詳細」を押し、「カレンダープラスアルファ（安全ではないページ）に移動」を押すと先へ進めます。確認が終わると、この画面は出なくなります。</div>
+<div class="warn"><strong>「Google はこのアプリを確認していません」と出たとき：</strong>Google の確認がまだ終わっていないために出る画面です。左下の「詳細」を押し、下に出る「カレンダープラスアルファ（安全ではないページ）に移動」を押すと先へ進めます。確認が終わると、この画面は出なくなります。</div>
 <ul>
 <li>アプリが使うのは、あなたのカレンダーの予定と、このアプリが Google ドライブに保存したファイルだけです。ドライブのほかのファイルは見ません</li>
 <li>メニューの「アカウントを追加」で、いくつかの Google アカウントをつなげます。予定はまとめて表示されます</li>
 <li>許可が切れたときは、メニューに「もう一度つなぐ」が出ます。押すと許可し直せます</li>
 </ul>
 
-<h2 id="views">2. カレンダーを見る（月・3週・週・日）</h2>
-<img class="shot" src="images/ja/1.png" width="1080" height="1920" loading="lazy" alt="3 週の表示。日付の下に天気が並ぶ">
+<h2 id="views">2. 画面の見方と切り替え</h2>
+<div class="figs">
+<figure><img src="images/manual/top-buttons.jpg" width="540" height="1200" loading="lazy" alt="カレンダーの画面の上のボタン"><figcaption><span class="n">1</span>メニュー <span class="n">2</span>今日に戻る <span class="n">3</span>色で絞り込み <span class="n">4</span>今すぐ更新 <span class="n">5</span>予定を作る <span class="n">6</span>月・3週・週・日の切り替え</figcaption></figure>
+<figure><img src="images/manual/view-3weeks.jpg" width="540" height="1200" loading="lazy" alt="3 週の表示。日付の下に天気"><figcaption>3週の表示。今週から 3 週分を大きなマスで見られます。天気を出す設定にすると、日付の下に天気が出ます</figcaption></figure>
+<figure><img src="images/manual/view-week.jpg" width="540" height="1200" loading="lazy" alt="週の表示"><figcaption>週の表示。時刻の目盛りを上下にスクロールして 1 日ぜんぶを見られます</figcaption></figure>
+</div>
 <ul>
-<li>上の 2 段目で「月・3週・週・日」を切り替えます。左右にスワイプするか「＜」「＞」で、前後の月・週・日に動きます</li>
-<li>上の見出し（年月）か、今日の日付の形のボタンを押すと、今日に戻ります</li>
+<li>左右にスワイプするか「‹」「›」で、前後の月・週・日に動きます</li>
 <li>月の表示で日付を押すと、その日の表示になります</li>
-<li>週・日の表示は、時刻の目盛りを上下にスクロールして 1 日ぜんぶを見られます</li>
-<li>上の回る矢印（更新）を押すと、すぐに Google カレンダーから読み込み直します。ふだんは開いたときと、裏で約 15 分ごとに読み込みます</li>
+<li><span class="n">4</span>を押すと、すぐに Google カレンダーから読み込み直します。ふだんは開いたときと、裏で約 15 分ごとに読み込みます</li>
 </ul>
 
 <h2 id="edit">3. 予定を作る・直す・消す</h2>
 <h3>作る</h3>
-<ol>
-<li>右上の「＋」を押します。週・日の表示では、空いている時刻を押してもその時刻から作れます</li>
-<li>タイトル・日時・カレンダー・場所・色・説明などを入れます</li>
-<li>右上の「保存」を押すと、すぐに Google カレンダーに保存されます</li>
-</ol>
-<h3>入れられるもの</h3>
+<p>右上の「＋」を押します。週・日の表示では、空いている時刻を押してもその時刻から作れます。</p>
+<div class="figs">
+<figure><img src="images/manual/edit-new.jpg" width="540" height="1200" loading="lazy" alt="予定の入力画面の上半分"><figcaption><span class="n">1</span>タイトル <span class="n">2</span>入れるアカウントとカレンダー <span class="n">3</span>終日・開始・終了 <span class="n">4</span>繰り返し <span class="n">5</span>ゲスト <span class="n">6</span>場所 <span class="n">7</span>通知 <span class="n">8</span>色 <span class="n">9</span>保存</figcaption></figure>
+<figure><img src="images/manual/edit-new-2.jpg" width="540" height="1200" loading="lazy" alt="予定の入力画面の下半分"><figcaption>下へ送ると、<span class="n">1</span>説明（画像も入れられます）と<span class="n">2</span>ファイルの添付があります</figcaption></figure>
+</div>
 <ul>
-<li>終日・開始と終了・タイムゾーン</li>
-<li>繰り返し：毎日・毎週・毎月・毎年、「カスタム…」で間隔・曜日・終わりの日や回数</li>
-<li>ゲスト：メールアドレスを足すと、保存したときに Google から案内のメールが届きます</li>
-<li>通知：「通知を追加」で、通知・メール・ウィジェット（下の「ウィジェットのやること」）と時期を選びます</li>
-<li>色・2 行表示（長いタイトルを月のマスで 2 行に折り返す印）</li>
+<li><span class="n">9</span>「保存」を押すと、すぐに Google カレンダーに保存されます</li>
+<li>ゲストにメールアドレスを足すと、保存したときに Google から案内のメールが届きます</li>
+<li>「2 行で表示する」をオンにすると、長いタイトルを月のマスで 2 行に折り返して全部見せます</li>
 </ul>
+<h3>通知とウィジェットの「やること」</h3>
+<div class="figs">
+<figure><img src="images/manual/notify-widget.jpg" width="540" height="1200" loading="lazy" alt="通知を追加の画面"><figcaption>「通知を追加」で<span class="n">1</span>方法（通知・メール・ウィジェット）と<span class="n">2</span>時期を選び、<span class="n">3</span>「追加」</figcaption></figure>
+</div>
+<p>方法を「ウィジェット」にすると、その時期から予定の日まで、ホーム画面のウィジェットの上に「やること」として出ます（<a href="#widget">11. ウィジェット</a>）。粗大ごみの日のような、忘れたくない予定に便利です。</p>
 <h3>直す・消す</h3>
+<div class="figs">
+<figure><img src="images/manual/event-desc.jpg" width="540" height="1200" loading="lazy" alt="開いた予定の下の方"><figcaption>予定を押すと開きます。<span class="n">1</span>説明を押すと編集でき、<span class="n">2</span>「削除」で消せます。何も変えていないときは「保存」は灰色です</figcaption></figure>
+</div>
 <ul>
-<li>予定を押すと開きます。内容を変えると「保存」を押せるようになります（何も変えていないときは灰色です）</li>
-<li>消すときは、予定を開いて「削除」を押します</li>
-<li>繰り返しの予定では、「この予定」「これ以降のすべての予定」「すべての予定」から選びます</li>
 <li>祝日など書き込めないカレンダーの予定は、見るだけです</li>
 </ul>
 
-<h2 id="move">4. 予定を長押しで動かす</h2>
-<p>週・日の表示では、予定を長押しして動かせます。</p>
+<h2 id="repeat">4. 繰り返しの予定</h2>
+<div class="figs">
+<figure><img src="images/manual/repeat.jpg" width="540" height="1200" loading="lazy" alt="繰り返しの選択"><figcaption>入力画面の「繰り返さない」を押すと出ます。<span class="n">1</span>から選ぶか、<span class="n">2</span>「カスタム…」</figcaption></figure>
+<figure><img src="images/manual/repeat-custom.jpg" width="540" height="1200" loading="lazy" alt="カスタムの繰り返し"><figcaption><span class="n">1</span>間隔 <span class="n">2</span>単位 <span class="n">3</span>曜日（いくつでも）<span class="n">4</span>終わり（なし・終了日・回数）を決めて<span class="n">5</span>「完了」</figcaption></figure>
+</div>
+<p>繰り返しの予定を直したり消したりするときは、「この予定」「これ以降のすべての予定」「すべての予定」から選ぶ画面が出ます（日付を変えたときは「すべての予定」は出ません）。</p>
+
+<h2 id="move">5. 予定を長押しで動かす</h2>
+<p>週・日の表示では、予定を長押しして、時刻や日を変えられます。</p>
+<div class="figs">
+<figure><img src="images/manual/move-select.jpg" width="540" height="1200" loading="lazy" alt="長押しで選んだ予定"><figcaption>予定を長押しすると、太い枠とつまみが出ます。<span class="n">1</span>予定をなぞると予定ごと動き、<span class="n">2</span>上のつまみで開始、<span class="n">3</span>下のつまみで終了を変えます</figcaption></figure>
+<figure><img src="images/manual/move-drag.jpg" width="540" height="1200" loading="lazy" alt="動かしている途中の予定"><figcaption>動かしている間は、行き先に「14:45–16:15」のように時刻が出ます。左右の列へなぞると別の日へ動きます</figcaption></figure>
+</div>
 <ul>
-<li>予定を長押しすると端末が震え、予定が太い枠で囲まれます。そのまま指をなぞると予定ごと動きます（週の表示では左右の列で別の日へ）</li>
-<li>囲まれた予定の上・下の丸いつまみをなぞると、開始・終了の時刻だけを変えられます</li>
 <li>指を離すとすぐに保存します。時刻は 15 分ごとにそろいます</li>
-<li>ほかのところを押すと、選ぶのをやめます</li>
+<li>選んでいる予定を動かさずに押すと、予定が開きます。ほかのところを押すと、選ぶのをやめます</li>
 <li>終日の予定・何日にもまたがる予定は、長押しで動かせません（押すと予定が開きます）</li>
+<li>繰り返しの予定は、離したあとに「この予定・これ以降・すべて」を選びます</li>
 </ul>
 
-<h2 id="images">5. 説明欄に画像を入れる・ファイルを添付する</h2>
-<img class="shot" src="images/ja/3.png" width="1080" height="1920" loading="lazy" alt="画像と添付ファイルの付いた予定">
-<h3>説明欄の画像</h3>
+<h2 id="images">6. 説明欄に画像を入れる</h2>
+<div class="figs">
+<figure><img src="images/manual/desc-editor.jpg" width="540" height="1200" loading="lazy" alt="説明欄の編集画面"><figcaption>説明欄を押すと、この画面になります。<span class="n">1</span>「画像を挿入」で写真を入れ、<span class="n">2</span>×か<span class="n">3</span>「画像を削除」で外し、<span class="n">4</span>「完了」</figcaption></figure>
+</div>
 <ol>
 <li>予定の入力画面で説明欄を押します</li>
-<li>文字を書き、「画像を挿入」で写真やスクリーンショットを選びます。画像は文字の途中にも入れられます</li>
-<li>画像を外すときは、画像の右上の×か、すぐ下の「画像を削除」を押します</li>
-<li>予定を保存すると、画像はあなたの Google ドライブの「カレンダープラス」フォルダに保存されます</li>
+<li>文字を書き、カーソルを置いたところに「画像を挿入」で写真やスクリーンショットを入れます</li>
+<li>「完了」を押し、予定を保存すると、画像はあなたの Google ドライブの「カレンダープラス」フォルダに保存されます</li>
 </ol>
 <ul>
 <li>説明欄の URL は押すと開けます</li>
 <li>Google カレンダーのアプリやパソコンでは、画像の行はリンクとして見えます（押すと画像が開きます）</li>
 </ul>
-<h3>ファイルの添付</h3>
+
+<h2 id="attach">7. ファイルを添付する</h2>
+<div class="figs">
+<figure><img src="images/manual/attach.jpg" width="540" height="1200" loading="lazy" alt="画像と添付ファイルの付いた予定"><figcaption><span class="n">1</span>添付したファイル（押すと開きます）<span class="n">2</span>「Google ドライブの添付ファイルを追加」で足す <span class="n">3</span>×で外す</figcaption></figure>
+</div>
 <ol>
 <li>入力画面の説明の下の「Google ドライブの添付ファイルを追加」を押し、PDF や写真などを選びます</li>
 <li>保存すると、ファイルが Google ドライブにアップロードされ、予定の添付欄に入ります。保存中は進み具合が出ます</li>
@@ -110,76 +149,69 @@
 </ul>
 <div class="tip">画像と添付ファイルは、カレンダーを共有しているメンバーのアプリでも見られるように、「リンクを知っている全員」が見られる設定で保存します。リンクが書かれた予定を見られるのはカレンダーの共有メンバーとゲストだけですが、リンクが転送されると誰でも見られます。人に見せたくないファイルは添付しないでください。</div>
 
-<h2 id="share">6. ほかのアプリから「共有」で添付する</h2>
-<ol>
-<li>ファイル管理やダウンロードのアプリで、ファイルの「共有」を押し、「カレンダープラスα」を選びます</li>
-<li>「新しい予定」か「既存の予定」（今日以降の予定から選ぶ。タイトルで探せます）を選びます</li>
-<li>アップロードが終わると「添付しました」と出ます</li>
-</ol>
-<p class="note">いくつかのファイルをまとめて共有すると、同じ予定に添付します。文字や URL だけの共有は受け取りません。</p>
-
-<h2 id="place">7. 場所と「ここに行く」</h2>
+<h2 id="place">8. 場所と「ここに行く」</h2>
+<div class="figs">
+<figure><img src="images/manual/place.jpg" width="540" height="1200" loading="lazy" alt="場所の欄"><figcaption><span class="n">1</span>場所の欄 <span class="n">2</span>Google マップで探す <span class="n">3</span>「ここに行く」で道案内</figcaption></figure>
+<figure><img src="images/manual/map-guide.jpg" width="540" height="1200" loading="lazy" alt="Google マップで場所を入れる手順の案内"><figcaption><span class="n">2</span>を押すと手順の案内が出ます。「マップを開く」で Google マップが開きます</figcaption></figure>
+</div>
 <ul>
 <li>場所の欄には、店名や住所をそのまま入れます</li>
-<li>欄の右の地図のボタンを押すと、Google マップが開きます。場所を探して「共有」→「カレンダープラスα」を選ぶと、名前と住所が入ります（はじめは手順の案内が出ます）</li>
+<li>Google マップで場所を探して「共有」→「カレンダープラスα」を選ぶと、名前と住所が入ります</li>
 <li>場所が入っている予定には「ここに行く」が出ます。押すと、Google マップで今いる所からの道案内が始まります</li>
 </ul>
 
-<h2 id="colors">8. 色分けに名前を付ける・絞り込む</h2>
-<img class="shot" src="images/ja/6.png" width="1080" height="1920" loading="lazy" alt="色分けの名前で絞り込む画面">
+<h2 id="colors">9. 色分けに名前を付ける・絞り込む</h2>
 <h3>色分けの名前</h3>
+<div class="figs">
+<figure><img src="images/manual/color-names.jpg" width="540" height="1200" loading="lazy" alt="色分けの名前の画面"><figcaption><span class="n">1</span>名前を共有するカレンダー <span class="n">2</span>色の名前（空にすると Google の名前） <span class="n">3</span>長押しして上下になぞると並べ替え</figcaption></figure>
+</div>
 <ul>
-<li>メニューの「色分けの名前」で、Google カレンダーの色に「仕事」「家族」などの名前を付けます。空にすると Google の色の名前に戻ります</li>
-<li>色の丸か右の「≡」を長押しして上下になぞると、並び順を変えられます</li>
-<li>画面の上の「名前を共有するカレンダー」で共有カレンダーを選ぶと、そのカレンダーのメンバーと名前をそろえられます</li>
+<li>メニューの「色分けの名前」で、Google カレンダーの色に「仕事」「家族」などの名前を付けます</li>
+<li><span class="n">1</span>で共有カレンダーを選ぶと、そのカレンダーのメンバーと名前をそろえられます</li>
 <li>名前はこのアプリの中だけのものです。Google カレンダーのアプリの色の名前は変わりません</li>
 </ul>
 <h3>絞り込み</h3>
+<div class="figs">
+<figure><img src="images/manual/filter.jpg" width="540" height="1200" loading="lazy" alt="色で絞り込みの画面"><figcaption><span class="n">1</span>チェックで表示・非表示 <span class="n">2</span>「これだけ」でその色だけ <span class="n">3</span>すべての色 <span class="n">4</span>名前を直す</figcaption></figure>
+<figure><img src="images/manual/filter-band.jpg" width="540" height="1200" loading="lazy" alt="絞り込み中の帯"><figcaption>絞り込み中は<span class="n">1</span>の帯が出ます。<span class="n">2</span>「解除」で全部の色に戻ります</figcaption></figure>
+</div>
+
+<h2 id="weather">10. 天気を出す（日本国内）</h2>
+<div class="figs">
+<figure><img src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面"><figcaption>メニューの「設定」で、<span class="n">2</span>「カレンダーに天気を出す」をオンにし、<span class="n">3</span>場所を選びます</figcaption></figure>
+<figure><img src="images/manual/weather-detail.jpg" width="540" height="1200" loading="lazy" alt="天気の詳しい予報"><figcaption>カレンダーの天気を押すと、地域ごとの気温・6 時間ごとの降水確率・風が見られます</figcaption></figure>
+</div>
 <ul>
-<li>上の段の絞り込みのボタンを押し、色ごとのチェックで表示・非表示を変えます。「これだけ」でその色だけを出します</li>
-<li>絞り込み中は「絞り込み中」の帯が出ます。右の「✕ 解除」で全部の色に戻ります</li>
+<li>場所は「現在地」か「都道府県を選ぶ」。現在地のときは、おおよその位置の許可を求めます（位置は端末の中で地域を選ぶのに使うだけで、外へは送りません）</li>
+<li>気象庁の天気予報（7 日先まで）が、日付の横や下に出ます。詳しい予報は左右に動かすと前後の日に変わります</li>
+<li>予報は気象庁の発表（5 時・11 時・17 時）のあとに自動で読み込み直します。日本の外では出ません</li>
 </ul>
 
-<h2 id="weather">9. 天気を出す（日本国内）</h2>
-<img class="shot" src="images/ja/5.png" width="1080" height="1920" loading="lazy" alt="天気の詳しい予報">
-<ol>
-<li>メニューの「設定」→「天気」で、「カレンダーに天気を出す」をオンにします</li>
-<li>場所を「現在地」か「都道府県を選ぶ」から選びます。現在地のときは、おおよその位置の許可を求めます（位置は端末の中で地域を選ぶのに使うだけで、外へは送りません）</li>
-</ol>
+<h2 id="widget">11. ウィジェットを置く</h2>
+<div class="figs">
+<figure><img src="images/manual/widget-step1.jpg" width="540" height="1200" loading="lazy" alt="ホーム画面を長押しして出るメニュー"><figcaption>ホーム画面の空いているところを長押しし、「ウィジェット」を押します</figcaption></figure>
+<figure><img src="images/manual/widget-step2.jpg" width="540" height="1200" loading="lazy" alt="ウィジェットの一覧"><figcaption><span class="n">1</span>「カレンダープラスα」を押して開き、<span class="n">2</span>置きたい種類を長押ししてホーム画面へ運びます</figcaption></figure>
+<figure><img src="images/manual/widget-home.jpg" width="540" height="1200" loading="lazy" alt="ホーム画面の 3 週間＋今日のウィジェット"><figcaption><span class="n">1</span>前後に動く <span class="n">2</span>予定を作る <span class="n">3</span>やること（✓で済み） <span class="n">4</span>今日の予定</figcaption></figure>
+</div>
 <ul>
-<li>気象庁の天気予報（7 日先まで）が、日付の横や下に出ます</li>
-<li>アプリの月・週・日の表示で天気を押すと、地域ごとの気温・6 時間ごとの降水確率・風・天気概況が見られます。左右に動かすと前後の日に変わります</li>
-<li>予報は気象庁の発表（5 時・11 時・17 時）のあとに自動で読み込み直します</li>
-<li>日本の外では出ません</li>
-</ul>
-
-<h2 id="widget">10. ウィジェットを置く</h2>
-<img class="shot" src="images/ja/4.png" width="1080" height="1920" loading="lazy" alt="やることと予定を出すウィジェット">
-<ol>
-<li>ホーム画面の空いているところを長押しし、「ウィジェット」を選びます</li>
-<li>「カレンダープラスα」の中から、月・週・日・3週間＋今日・予定リストのどれかを選んで置きます</li>
+<li>種類は、月・週・日・3週間＋今日・予定リストの 5 つです</li>
 <li>置いたときに出る設定で、表示するカレンダー・背景・週の始まりなどを選びます。あとから、ウィジェットの長押しで変えられます</li>
-</ol>
-<ul>
-<li>「＜」「＞」で前後に動き、見出しを押すと今日に戻ります。「＋」で予定を作れます</li>
-<li>ウィジェットの絞り込みのボタンで、そのウィジェットに出す色を選べます</li>
-<li>大きさは自由に変えられます。小さいときは、天気はアイコンだけになります</li>
-</ul>
-<h3>ウィジェットのやること</h3>
-<p>粗大ごみの日のような「忘れたくない予定」は、予定の「通知を追加」で「ウィジェット」を選びます。通知の時期（例：1 日前の 9 時）から予定が終わるまで、ウィジェットの上に「今日／明日／あと N 日」の札と題名が出ます。右の ✓ を押すと「済み」になって消えます。</p>
-
-<h2 id="menu">11. メニューと設定</h2>
-<p>左上の「≡」でメニューを開きます。</p>
-<ul>
-<li>表示の種類（日・週・月）と更新（最後に読み込んだ時刻も出ます）</li>
-<li>アカウントごとのカレンダー：チェックを外すと、そのカレンダーの予定をこのアプリとウィジェットに出しません（Google カレンダーの設定は変わりません）</li>
-<li>アカウントを追加・×でアカウントを外す（Google カレンダーの予定は消えません）</li>
-<li>カレンダーを共有（ユーザーを追加）：自分のカレンダーを、メールアドレスと権限を選んでほかの人と共有します。共有をやめるのは×です</li>
-<li>色分けの名前</li>
-<li>設定：言語（自動か 12 言語）・天気・「このアプリについて」（プライバシーポリシー）</li>
+<li>見出しを押すと今日に戻ります。大きさは自由に変えられ、小さいときは天気はアイコンだけになります</li>
+<li>「やること」には、通知の方法を「ウィジェット」にした予定が出ます（<a href="#edit">3. 通知</a>）</li>
 </ul>
 
-<h2 id="faq">12. よくある質問</h2>
+<h2 id="menu">12. メニューと設定</h2>
+<div class="figs">
+<figure><img src="images/manual/menu.jpg" width="540" height="1200" loading="lazy" alt="メニュー"><figcaption><span class="n">1</span>表示の種類と今すぐ更新 <span class="n">2</span>アカウントとカレンダー（チェックで出す・出さない、×で外す） <span class="n">3</span>アカウントを追加 <span class="n">4</span>カレンダーを共有 <span class="n">5</span>色分けの名前 <span class="n">6</span>設定</figcaption></figure>
+<figure><img src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面"><figcaption><span class="n">1</span>言語（自動か 12 言語） <span class="n">2</span><span class="n">3</span>天気 <span class="n">4</span>プライバシーポリシー</figcaption></figure>
+</div>
+<ul>
+<li>カレンダーのチェックを外すと、そのカレンダーの予定をこのアプリとウィジェットに出しません（Google カレンダーの設定は変わりません）</li>
+<li>アカウントを外しても、Google カレンダーの予定は消えません</li>
+<li>「カレンダーを共有」では、自分のカレンダーを、メールアドレスと権限を選んでほかの人と共有できます。やめるのは×です</li>
+</ul>
+
+<h2 id="faq">13. よくある質問</h2>
 <h3>予定はどこに保存されますか？</h3>
 <p>あなたの Google カレンダーです。添付ファイルと画像はあなたの Google ドライブの「カレンダープラス」フォルダです。運営者のサーバーには何も送りません。アプリを消しても、予定とファイルは残ります。</p>
 <h3>Google カレンダーのアプリで作った予定も直せますか？</h3>
@@ -197,6 +229,7 @@
 <p>DNGG-studio：<a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
 <p class="note">本アプリは Google の公式アプリではありません。Google カレンダー、Google ドライブ、Google マップは Google LLC の商標です。天気予報の出典：気象庁ホームページ。</p>
 <p><a href="./">紹介ページへ戻る</a></p>
+
 <section class="dngg-apps" data-mode="others" data-current="calendar-plus" data-lang="ja">
 <p><a href="../">DNGG-studio のアプリ一覧</a></p>
 </section>
