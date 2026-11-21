@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使い方 - たべもの番号帳（Food Tag Log）</title>
+<meta name="description" content="たべもの番号帳（Food Tag Log）の使い方。番号シールの準備、入れる・取り出す、一覧と並べ替え、設定、家族で共有。">
+<link rel="icon" href="images/icon.png">
+<style>body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.5em}img{max-width:100%;height:auto}.shot{display:block;max-width:240px;border-radius:8px;margin:12px 0}.toc{background:#f3f7f5;border-radius:8px;padding:12px 16px 12px 36px}.note{font-size:.9em;color:#555}.tip{background:#eef7f2;border-left:4px solid #2e7d5b;padding:8px 12px;margin:12px 0}table{border-collapse:collapse;width:100%;font-size:.95em}th,td{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}th{background:#eef5f1}ol li,ul li{margin:.2em 0}</style>
+</head>
+<body>
+<p><a href="./">たべもの番号帳 の紹介ページへ戻る</a></p>
+<h1>たべもの番号帳 の使い方</h1>
+<p>たべもの番号帳（Food Tag Log）は、容器に貼った番号シールで冷蔵庫の食べ物を管理するアプリです。入れるときと出すときに番号を打つだけで、「いつ入れたか」「あと何日か」が分かります。</p>
+<p class="note">この説明は バージョン 0.1.0 の画面に合わせています（2026年11月22日）。画面はこれから変わることがあります。</p>
+
+<ol class="toc">
+<li><a href="#start">はじめに：番号シールを用意する</a></li>
+<li><a href="#putin">入れる</a></li>
+<li><a href="#takeout">取り出す</a></li>
+<li><a href="#list">一覧を見る・並べ替える</a></li>
+<li><a href="#numbers">番号の一覧と記録</a></li>
+<li><a href="#settings">設定（期限の考え方・番号の範囲・種別・通知）</a></li>
+<li><a href="#family">家族で共有する</a></li>
+<li><a href="#faq">よくある質問</a></li>
+</ol>
+
+<h2 id="start">1. はじめに：番号シールを用意する</h2>
+<ol>
+<li>保存容器に番号を書いたシールを貼ります。食洗機や水に強いシール・テープに、油性ペンで書くのがおすすめです</li>
+<li>アプリを開き、通知の許可を聞かれたら「許可」を押します（期限が近い食べ物を毎日知らせるため。あとから設定でも変えられます）</li>
+<li>使う番号が 1〜30 以外なら、右上の「︙」→「設定」の「番号の範囲」を直します（<a href="#settings">6.</a>）</li>
+</ol>
+<div class="tip">ひとりで使うときは、Google アカウントもインターネットも要りません。記録はこの端末の中だけに保存されます。</div>
+
+<h2 id="putin">2. 入れる</h2>
+<img class="shot" src="images/ja/2.png" width="1080" height="1920" loading="lazy" alt="番号を打つテンキー">
+<ol>
+<li>一覧の下の「入れる」を押します</li>
+<li>容器のシールの番号をテンキーで打ち、「次へ」を押します。「空き：○番」を押すと、空いている番号が入ります</li>
+<li>「種別」（肉料理・魚料理・野菜・ご飯・麺・汁物・作り置き・その他）を選びます</li>
+<li>必要なら「場所」（冷蔵・冷凍・野菜室）、「名前（任意）」、「入れた日」、「期限日も入れる」、「写真」（「撮る」か「選ぶ」）、「備考」を入れます</li>
+<li>下の「保存」を押します</li>
+</ol>
+<ul>
+<li>使用中の番号を打つと「○番は使用中です」と出ます。別の番号にするか、「このまま使う」を押します</li>
+<li>前に入れた名前は候補に出るので、押すだけで入れられます</li>
+<li>入れたあとで直すときは、一覧で食品を押して、詳細の右上の「直す」を押します</li>
+</ul>
+
+<h2 id="takeout">3. 取り出す</h2>
+<ol>
+<li>一覧の下の「取り出す」を押します</li>
+<li>番号を打ち、「次へ」を押します</li>
+<li>中身を確かめて「食べた」か「捨てた」を押します</li>
+</ol>
+<ul>
+<li>押した直後に下に出る「取り消す」を押すと、元に戻せます</li>
+<li>詳細の画面からも「食べた」「捨てた」で取り出せます</li>
+</ul>
+
+<h2 id="list">4. 一覧を見る・並べ替える</h2>
+<img class="shot" src="images/ja/1.png" width="1080" height="1920" loading="lazy" alt="一覧">
+<ul>
+<li>入れてから何日目か（「今日入れた」「3日目」）と、期限まで（「あと2日」「1日過ぎ」）が出ます</li>
+<li>色は、期限まで余裕あり＝緑、もうすぐ＝黄、過ぎた＝赤です</li>
+<li>上の「すべて・冷蔵・冷凍・野菜室」で場所を絞り込めます</li>
+<li>右の並べ替えのボタンで「経過日数が長い順」「経過日数が短い順」「期限が近い順」「番号順」「種別順」を選べます</li>
+<li>食品を押すと、写真と詳しい内容が出ます</li>
+</ul>
+
+<h2 id="numbers">5. 番号の一覧と記録</h2>
+<p>右上の「︙」から開きます。</p>
+<ul>
+<li><strong>番号の一覧：</strong>色の付いた番号が使用中です。押すと中身を見られます。「空き ○ / ○」で空いている数が分かります</li>
+<li><strong>記録：</strong>食べた・捨てたものの一覧です。間違えて取り出したものは、押して詳細の「取り消す」で戻せます</li>
+</ul>
+
+<h2 id="settings">6. 設定</h2>
+<p>右上の「︙」→「設定」で変えられます。</p>
+<table>
+<tr><th>項目</th><th>内容</th></tr>
+<tr><td>使う人</td><td>「ひとりで使う（この端末だけ）」か「家族で使う（Google ドライブ）」</td></tr>
+<tr><td>期限の考え方</td><td>「経過日数」：種別の目安の日数で期限を決めます（期限日を入れた食品はその日）。「期限日」：入れるときに期限日を入れます（入れなければ目安の日数）。「両方」：期限日と目安の日数の早いほう</td></tr>
+<tr><td>番号の範囲</td><td>使う番号を「1-50, 101-150」の形で入れます（1〜9999）</td></tr>
+<tr><td>種別と目安の日数</td><td>種別ごとに、冷蔵・冷凍で何日もつかの目安を変えられます。「種別を足す」で自分の種別も作れます</td></tr>
+<tr><td>期限の通知</td><td>毎日「通知する時刻」に、もうすぐ・過ぎた食べ物の数を知らせます</td></tr>
+<tr><td>あなたの名前</td><td>家族に「入れた人」として表示されます</td></tr>
+<tr><td>言語</td><td>「自動（端末の言語）」か、12 の言語から選べます</td></tr>
+</table>
+<p class="note">目安の日数は家庭での目安です。食べる前に、においや見た目も確かめてください。</p>
+
+<h2 id="family">7. 家族で共有する</h2>
+<p>家族それぞれの Google ドライブに記録を置き、お互いに読み合います。サーバーは使わず、無料です。右上の「︙」→「家族で共有」から始めます。</p>
+<h3>グループを作る（最初の 1 人）</h3>
+<ol>
+<li>「グループを作る（Google ドライブにつなぐ）」を押します</li>
+<li>Google アカウントを選び、Google ドライブの許可を押します</li>
+<li>「あなたのコード」が出たら、「送る」（メール・LINE など）か「コピー」で家族に渡します。QR コードも表示されます</li>
+</ol>
+<div class="tip">「Google はこのアプリを確認していません」という画面が出たときは、Google の確認がまだ終わっていないためです。「続行」を押すと先へ進めます（確認が終わると出なくなります）。</div>
+<h3>招待されたとき</h3>
+<ol>
+<li>「家族で共有」の「コード」に招待のコードを入れます（「貼り付け」か「QR を読み取る」）</li>
+<li>入れる・取り出すもするときは「管理に参加する」を押し、自分の Google アカウントでドライブにつなぎます。見るだけのときは「見るだけ参加する」を押します（Google アカウントは要りません）</li>
+<li>「管理に参加する」で参加したときは、画面に出る「あなたのコード」を、招待してくれた人に送り返します（返事のコード）</li>
+<li>招待した人は、受け取ったコードを「返事のコードを入れる」に入れます。これでお互いの記録を読み合えるようになります</li>
+</ol>
+<ul>
+<li>3 人目からは、だれか 1 人と招待・返事を交わせば、ほかのメンバーにも伝わります</li>
+<li>同期は、アプリを開いたとき・一覧を下に引いたとき・入れる・取り出すのあとに行います。すぐ同期するときは上の同期のボタンを押します</li>
+<li>メンバーを外すときは、メンバーの一覧の「外す」を押します。やめるときは「共有をやめる」を押します（家族の記録の写しは端末から消え、ひとりで使う形に戻ります）</li>
+</ul>
+<div class="tip"><strong>ご注意：</strong>コードを知っている人は、食品の一覧と写真を見られます。コードは家族など信頼できる人にだけ渡し、写真に家の中や個人の情報が写らないようにしてください。</div>
+
+<h2 id="faq">8. よくある質問</h2>
+<h3>記録はどこに保存されますか？</h3>
+<p>ひとりで使うときは、この端末の中だけです。家族で使うときは、各自の Google ドライブの「FoodTagLog」フォルダにも保存します。運営者のサーバーには何も送りません。</p>
+<h3>機種変更したら記録は引き継げますか？</h3>
+<p>家族で使う形にしておけば、新しい端末で同じグループに参加し直すと、家族の記録を読めます。ひとりで使う形の記録は、今は引き継げません。</p>
+<h3>同じ番号を 2 人が同時に使ってしまいました</h3>
+<p>一覧に「番号が重なっています」と出ます。取り出すときは、どちらを取り出すか選べます。どちらかを直して番号を変えてください。</p>
+<h3>記録を消したい</h3>
+<p>アプリを削除すると、端末の記録は消えます。家族で使っていたときは、Google ドライブの「FoodTagLog」フォルダも削除してください。Google のアクセスは <a href="https://myaccount.google.com/connections">Google アカウントの「サードパーティ製のアプリとサービス」</a>から削除できます。</p>
+<h3>データの扱いを詳しく知りたい</h3>
+<p><a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<h2>お問い合わせ</h2>
+<p>DNGG-studio：<a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
+<p class="note">本アプリは Google の公式アプリではありません。Google ドライブは Google LLC の商標です。</p>
+<p><a href="./">紹介ページへ戻る</a></p>
+<section class="dngg-apps" data-mode="others" data-current="food-tag" data-lang="ja">
+<p><a href="../">DNGG-studio のアプリ一覧</a></p>
+</section>
+<script src="../apps.js" defer></script>
+</body>
+</html>
