@@ -1,6 +1,8 @@
 /*
  * DNGG-studio のアプリの一覧（公開サイトの正本）。
  * トップページ（index.html）と、各アプリの紹介ページ・使い方のページの「ほかのアプリ」の欄は、ここから作る。
+ * shots：トップページの札に並べる画面の画像 [名前, 日本語の説明, 英語の説明]（4 枚まで）。画像は <フォルダ>/images/thumbs/<ja か en>/<名前>.jpg（幅 240px の JPEG）。
+ * enShots：英語の画像（thumbs/en/）があれば true。
  * アプリを足すときは、下の APPS に 1 件足すだけでよい（テンプレート template-android の docs/public-pages-guide.md「アプリの一覧」）。
  *
  * 使い方（ページの側）：
@@ -15,6 +17,7 @@
   var APPS = [
     {
       id: 'calendar-plus', category: 'tool', icon: true, manual: true,
+      shots: [['1', '天気が予定の横に並ぶ 3 週の表示', '3-week view with weather'], ['3', '画像と添付ファイルの付いた予定', 'Event with images and files'], ['4', 'やることと予定のウィジェット', 'Widget with to-dos'], ['5', '天気の詳しい予報', 'Detailed forecast']], enShots: false,
       name: { ja: 'カレンダープラスα', en: 'Calendar Plus α' },
       desc: {
         ja: 'Google カレンダーの予定に、画像・ファイルの添付と 1 週間の天気をプラス。',
@@ -23,6 +26,7 @@
     },
     {
       id: 'talking-clock', category: 'tool', icon: false, manual: false,
+      shots: [['1', 'コーギーの写真の着せ替え', 'Corgi photo theme'], ['2', 'スイーツの写真の着せ替え', 'Sweets photo theme'], ['3', '着せ替えのカテゴリー', 'Theme categories'], ['4', '設定の画面', 'Settings']], enShots: false,
       name: { ja: 'しゃべる時計', en: 'Talking Clock' },
       desc: {
         ja: '時刻を声で知らせる時計。写真の着せ替えや今日の予定の読み上げにも対応。',
@@ -31,6 +35,7 @@
     },
     {
       id: 'kumiki', category: 'game', icon: true, manual: false,
+      shots: [['1', 'タイトル画面', 'Title screen'], ['2', 'プレイ画面', 'Gameplay'], ['karakuri', 'からくり屋敷のステージ', 'Karakuri house stage'], ['4', '銀河のステージ', 'Galaxy stage']], enShots: true,
       name: { ja: 'Block KUMIKI', en: 'Block KUMIKI' },
       desc: {
         ja: 'ピースを置いて、そろえて、消す。木のぬくもりのブロックパズル。',
@@ -39,6 +44,7 @@
     },
     {
       id: 'tetogravity', category: 'game', icon: true, manual: false,
+      shots: [['1', 'タイトル', 'Title'], ['2', 'とことんテトグラ', 'Endless mode'], ['3', 'お城防衛', 'Castle defense'], ['4', '木を育てよう', 'Grow a tree']], enShots: true,
       name: { ja: 'TETOGRAVITY（テトグラビティ）', en: 'TETOGRAVITY' },
       desc: {
         ja: '落ちてくるブロックを、空に浮かぶ島の上に積み上げる重力バランスゲーム。',
@@ -47,6 +53,7 @@
     },
     {
       id: 'irodori-survivor', category: 'game', icon: true, manual: false,
+      shots: [['1', 'タイトル', 'Title'], ['2', 'プレイ画面', 'Gameplay'], ['4', '仲間を選ぶ', 'Choose a buddy'], ['5', 'ステージを選ぶ', 'Choose a stage']], enShots: true,
       name: { ja: 'いろどり冒険サバイバー', en: 'IRODORI SURVIVOR' },
       desc: {
         ja: '絵本の世界で 30 分生きのびよう。攻撃は自動、操作は移動だけのサバイバーアクション。',
@@ -55,6 +62,7 @@
     },
     {
       id: 'reversi', category: 'game', icon: true, manual: false,
+      shots: [['1', 'ホーム', 'Home'], ['2', 'ヒント', 'Hints'], ['3', '振り返り', 'Game review'], ['4', '定石レッスン', 'Opening lessons']], enShots: true,
       name: { ja: 'リバーシ先生', en: 'Reversi Sensei' },
       desc: {
         ja: '20 段階の CPU、理由つきヒント、振り返り、定石学習でリバーシが上達。',
@@ -63,6 +71,7 @@
     },
     {
       id: 'eiken', category: 'study', icon: true, manual: false,
+      shots: [['1', 'ホーム', 'Home'], ['2', '単語', 'Vocabulary'], ['3', '筆記と解説', 'Reading and explanations'], ['4', 'リスニング', 'Listening']], enShots: true,
       name: { ja: '英検トレーナー', en: 'Eiken Trainer' },
       desc: {
         ja: '英検 5 級・4 級・3 級の単語・筆記・リスニング・ライティングをまとめて学習。',
@@ -71,6 +80,7 @@
     },
     {
       id: 'denko2', category: 'study', icon: true, manual: false,
+      shots: [['1', 'ホーム', 'Home'], ['2', '問題', 'Question'], ['3', '解説', 'Explanation'], ['5', '学習範囲', 'Study range']], enShots: true,
       name: { ja: '電工二種 過去問ドリル', en: 'Denko2 Drill' },
       desc: {
         ja: '第二種電気工事士の学科試験・技能試験の対策アプリ。',
@@ -111,7 +121,13 @@
     '.dngg-app-links{display:block;font-size:.85em;margin-top:6px}' +
     '.dngg-app-links a{margin-right:.8em}' +
     '.dngg-app-status{display:block;font-size:.8em;color:#888;margin-top:4px}' +
-    '.dngg-apps-more{margin-top:1em}';
+    '.dngg-apps-more{margin-top:1em}' +
+    '.dngg-apps[data-mode=all] .dngg-apps-list{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}' +
+    '.dngg-app-full{display:block;padding:12px;border:1px solid #e3e3e3;border-radius:12px;background:#fff}' +
+    '.dngg-app-head{display:flex;gap:12px;align-items:flex-start;line-height:1.5}' +
+    '.dngg-app-shots{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}' +
+    '.dngg-app-shots a{display:block;border-radius:6px;overflow:hidden;border:1px solid #e3e3e3;background:#eee;aspect-ratio:9/16}' +
+    '.dngg-app-shots img{display:block;width:100%;height:100%;object-fit:cover}';
 
   function el(tag, cls, text) {
     var e = document.createElement(tag);
@@ -136,7 +152,7 @@
   /** 1 件の札。full のときは紹介・使い方・プライバシーポリシーのリンクを並べ、そうでなければ札全体を紹介ページへのリンクにする */
   function card(app, lang, base, full) {
     var t = TEXT[lang];
-    var box = el(full ? 'div' : 'a', 'dngg-app');
+    var box = el(full ? 'div' : 'a', full ? 'dngg-app-head' : 'dngg-app');
     if (!full) box.href = base + app.id + '/';
     box.appendChild(icon(app, base));
     var body = el('span', 'dngg-app-body');
@@ -163,8 +179,35 @@
     }
     box.appendChild(body);
     var li = el('li');
-    li.appendChild(box);
+    if (!full) {
+      li.appendChild(box);
+      return li;
+    }
+    var wrap = el('div', 'dngg-app-full');
+    wrap.appendChild(box);
+    if (app.shots && app.shots.length) wrap.appendChild(shots(app, lang, base));
+    li.appendChild(wrap);
     return li;
+  }
+
+  /** 画面の小さな画像（images/thumbs/<言語>/<名前>.jpg）。押すと紹介ページを開く。英語の画像がないアプリは日本語の画像を出す */
+  function shots(app, lang, base) {
+    var dir = base + app.id + '/images/thumbs/' + (lang === 'en' && app.enShots ? 'en' : 'ja') + '/';
+    var row = el('div', 'dngg-app-shots');
+    app.shots.forEach(function (s) {
+      var a = el('a');
+      a.href = base + app.id + '/';
+      var img = el('img');
+      img.src = dir + s[0] + '.jpg';
+      img.alt = s[lang === 'en' ? 2 : 1];
+      img.title = img.alt;
+      img.width = 240;
+      img.height = 427;
+      img.loading = 'lazy';
+      a.appendChild(img);
+      row.appendChild(a);
+    });
+    return row;
   }
 
   function render(section) {
