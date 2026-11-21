@@ -34,6 +34,15 @@
       }
     },
     {
+      id: 'food-tag', category: 'tool', icon: true, manual: true,
+      shots: [['1', '経過日数と期限の色が並ぶ一覧', 'Days stored and expiry colors'], ['2', '番号を打つだけで入れる', 'Just type the number'], ['3', '写真と名前の付いた食品', 'Food with a photo and name'], ['4', '使用中と空きの番号', 'Numbers in use and free']], enShots: true,
+      name: { ja: 'たべもの番号帳', en: 'Food Tag Log' },
+      desc: {
+        ja: '容器に番号シール。入れる・出すは番号を打つだけで、冷蔵庫の食べ物の日数と期限を管理。',
+        en: 'Number tags on containers: type the number to track how long food has been in your fridge.'
+      }
+    },
+    {
       id: 'kumiki', category: 'game', icon: true, manual: false,
       shots: [['1', 'タイトル画面', 'Title screen'], ['2', 'プレイ画面', 'Gameplay'], ['karakuri', 'からくり屋敷のステージ', 'Karakuri house stage'], ['4', '銀河のステージ', 'Galaxy stage']], enShots: true,
       name: { ja: 'Block KUMIKI', en: 'Block KUMIKI' },
