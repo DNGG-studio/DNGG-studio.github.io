@@ -52,7 +52,7 @@
       }
     },
     {
-      id: 'kumiki', category: 'game', icon: true, manual: false,
+      id: 'kumiki', category: 'game', icon: true, manual: true,
       shots: [['1', 'タイトル画面', 'Title screen'], ['2', 'プレイ画面', 'Gameplay'], ['karakuri', 'からくり屋敷のステージ', 'Karakuri house stage'], ['4', '銀河のステージ', 'Galaxy stage']], enShots: true,
       name: { ja: 'Block KUMIKI', en: 'Block KUMIKI' },
       desc: {
