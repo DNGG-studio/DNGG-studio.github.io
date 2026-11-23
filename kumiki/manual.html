@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>遊び方 - Block KUMIKI</title>
+<meta name="description" content="Block KUMIKI の遊び方。画面の画像つきで、ピースの置き方、得点とコンボ、10のステージの仕掛け、リトライとふりかえり、ステージ別組木、詰め組木、ベスト記録、設定を説明します。">
+<link rel="icon" href="images/icon.png">
+<style>
+body{font-family:sans-serif;max-width:760px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}
+h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.4em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.6em}
+img{max-width:100%;height:auto}
+.toc{background:#f5f5f5;border-radius:8px;padding:12px 16px 12px 36px}
+.note{font-size:.9em;color:#555}
+.tip{background:#eef5ff;border-left:4px solid #4285f4;padding:8px 12px;margin:12px 0}
+.warn{background:#fff6e5;border-left:4px solid #f29900;padding:8px 12px;margin:12px 0}
+ol li,ul li{margin:.2em 0}
+.figs{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px}
+figure{margin:0;width:228px;max-width:100%}
+figure img{display:block;width:100%;border:1px solid #ddd;border-radius:10px}
+figcaption{font-size:.88em;color:#444;margin-top:6px;line-height:1.55}
+table{border-collapse:collapse;margin:12px 0}th,td{border:1px solid #ddd;padding:4px 10px;text-align:left}th{background:#f5f5f5}
+.n{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;border-radius:50%;background:#e53935;color:#fff;font-size:.8em;font-weight:bold;text-align:center;margin-right:2px}
+@media (max-width:520px){figure{width:100%;max-width:300px}}
+</style>
+</head>
+<body>
+<p><a href="./">Block KUMIKI の紹介ページへ戻る</a> ・ <a href="../">DNGG-studio のアプリ一覧</a></p>
+<h1>Block KUMIKI の遊び方</h1>
+<p>Block KUMIKI は、8×8 の盤面にピースを置いて、縦か横の1列をそろえて消すブロックパズルです。時間制限はありません。アカウントの登録もいりません。</p>
+<p>画像の<span class="n">1</span>のような赤い番号は、押すところや見るところと、説明の番号です。</p>
+<p class="note">この説明は バージョン 1.1.4 の画面に合わせています（2026年11月24日）。画面はこれから変わることがあります。画像の得点や記録は見本です。</p>
+
+<ol class="toc">
+<li><a href="#start">はじめに：タイトル画面</a></li>
+<li><a href="#screen">ゲーム画面の見かた</a></li>
+<li><a href="#put">ピースを置いて消す</a></li>
+<li><a href="#score">得点・コンボ・チャンス・グッド</a></li>
+<li><a href="#level">レベルとステージ</a></li>
+<li><a href="#gimmick">ステージの仕掛け（ギミック）</a></li>
+<li><a href="#retry">リトライ</a></li>
+<li><a href="#over">ゲームオーバーとふりかえり</a></li>
+<li><a href="#stages">ステージ別組木</a></li>
+<li><a href="#puzzle">詰め組木</a></li>
+<li><a href="#records">ベスト記録と友達への共有</a></li>
+<li><a href="#settings">設定</a></li>
+<li><a href="#ads">広告について</a></li>
+<li><a href="#faq">よくある質問</a></li>
+</ol>
+
+<h2 id="start">1. はじめに：タイトル画面</h2>
+<p>アプリを開くとタイトル画面になります。はじめての方は「▶ ゲームスタート」を押してください。</p>
+<div class="figs">
+<figure><img src="images/manual/title.jpg" width="540" height="1200" loading="lazy" alt="タイトル画面。6つのボタンが並ぶ"><figcaption><span class="n">1</span>通常モードを始める <span class="n">2</span>好きなステージだけ遊ぶ <span class="n">3</span>パズル問題を解く <span class="n">4</span>ベスト記録を見る <span class="n">5</span>設定 <span class="n">6</span>遊び方の短い説明</figcaption></figure>
+<figure><img src="images/manual/continue.jpg" width="540" height="1200" loading="lazy" alt="途中のゲームがあるときのタイトル画面"><figcaption>途中のゲームがあるときは<span class="n">1</span>「▶ つづきから」が出て、続きを遊べます。ゲームオーバーでリトライが残っているときは「（リトライ可）」と出ます</figcaption></figure>
+</div>
+<div class="warn">「つづきから」は、アプリを開いている間だけ使えます。アプリを終了すると、途中のゲームは消えます（ベストスコア、ベスト記録、詰め組木の進み具合、設定は残ります）。</div>
+
+<h2 id="screen">2. ゲーム画面の見かた</h2>
+<div class="figs">
+<figure><img src="images/manual/game.jpg" width="540" height="1200" loading="lazy" alt="ゲーム画面。盤面と3つのピース"><figcaption><span class="n">1</span>置き場の3つのピース <span class="n">2</span>盤面（8×8） <span class="n">3</span>スコア <span class="n">4</span>レベルと、次のレベルまでの点 <span class="n">5</span>リトライ <span class="n">6</span>設定 <span class="n">7</span>最初からやり直す <span class="n">8</span>タイトルへ戻る</figcaption></figure>
+</div>
+<ul>
+<li>左上の 👑 は、ベストスコアです</li>
+<li><span class="n">7</span>「↻」を押すと「最初からやり直しますか？」と確認が出ます。まちがえて押しても「いいえ」で戻れます</li>
+<li>スマホの戻るボタンは、設定などを開いているときは閉じる、ゲーム中はタイトルへ、タイトルではアプリを閉じる、の順に働きます</li>
+</ul>
+
+<h2 id="put">3. ピースを置いて消す</h2>
+<div class="figs">
+<figure><img src="images/manual/drag.jpg" width="540" height="1200" loading="lazy" alt="ピースを盤面へ動かしているところ"><figcaption><span class="n">1</span>置き場のピースを指で押さえたまま動かし、<span class="n">2</span>置きたい場所で指を離します</figcaption></figure>
+<figure><img src="images/manual/clear.jpg" width="540" height="1200" loading="lazy" alt="横の1列がそろって消えたところ"><figcaption>縦か横の1列がそろうと消えて、得点になります</figcaption></figure>
+</div>
+<ol>
+<li>置き場の3つのピースのうち、好きなものを押さえて盤面へ動かします。置く順番は自由です</li>
+<li>動かしている間、ピースは指の少し上に出ます。置ける場所に来ると、盤面に置く位置が表示されます</li>
+<li>指を離すと置けます。置けない場所で離すと、ピースは置き場に戻ります</li>
+<li>3つとも置くと、新しい3つが出ます</li>
+</ol>
+<div class="tip">新しく出る3つは、置く順番と場所を工夫すれば、必ず3つとも置ける組み合わせになっています。行きづまりそうなときは、3つ全部の置き方を考えてから置いてみてください（盤面がほとんど埋まっているときは、そうならないこともあります）。</div>
+
+<h2 id="score">4. 得点・コンボ・チャンス・グッド</h2>
+<h3>同時にたくさん消す</h3>
+<table>
+<tr><th>同時に消した列</th><th>得点</th><th>ほめ言葉</th></tr>
+<tr><td>1列</td><td>20</td><td>－</td></tr>
+<tr><td>2列</td><td>60</td><td>ナイス!</td></tr>
+<tr><td>3列</td><td>120</td><td>グレート!</td></tr>
+<tr><td>4列</td><td>200</td><td>エクセレント!</td></tr>
+</table>
+<ul>
+<li>ピースを置くだけでも、1マスにつき2点が入ります</li>
+<li>盤面のブロックを全部消すと「オールクリア!」で、500点のボーナスが入ります</li>
+<li>レベルが1つ上がるごとに、得点が15％ずつ増えます（Lv.2 は 1.15倍、Lv.3 は 1.3倍）</li>
+</ul>
+<h3>コンボ</h3>
+<p>続けて消すと「コンボ ×2」「×3」と増え、列を消した得点がその数だけ倍になります。ピースを3つ続けて置いて1列も消せないと、コンボは終わります。</p>
+<h3>チャンス!</h3>
+<p>金色に光って「チャンス!」と出たピースは、うまく置くと2列以上を一気に消せます。</p>
+<h3>グッド!</h3>
+<p>先のことまで考えていちばんよい場所に置くと、👍 と「グッド!」が出て、ボーナスが入ります。どこに置いても同じような場面では出ません。</p>
+<div class="figs">
+<figure><img src="images/manual/combo.jpg" width="540" height="1200" loading="lazy" alt="2列を同時に消して、コンボが2になったところ"><figcaption>2列を同時に消して「ナイス!」、続けて消したので「コンボ ×2」</figcaption></figure>
+<figure><img src="images/manual/chance.jpg" width="540" height="1200" loading="lazy" alt="金色に光るチャンスのピース"><figcaption><span class="n">1</span>金色に光るピースを<span class="n">2</span>に置くと、3列を一気に消せます</figcaption></figure>
+<figure><img src="images/manual/good.jpg" width="540" height="1200" loading="lazy" alt="3列を同時に消して、グレートと出たところ"><figcaption>3列を同時に消して「グレート!」</figcaption></figure>
+</div>
+
+<h2 id="level">5. レベルとステージ</h2>
+<ul>
+<li>得点がたまるとレベルが上がります。レベルが低いうちは大きめのピースが多く、上がるほど、はめにくいピースが増えます</li>
+<li>5レベルごと（Lv.6・11・16…）にステージが変わります。背景・音楽・ブロックの色が変わり、新しい形のピースと仕掛け（ギミック）が加わります</li>
+<li>10番目のステージのあとは、「からくり屋敷」から順にくり返します</li>
+</ul>
+<div class="figs">
+<figure><img src="images/manual/intro.jpg" width="540" height="1200" loading="lazy" alt="ステージの紹介の表示"><figcaption>ステージが変わると、新しい形のピースと仕掛けの説明が出ます。少し待つと消えます（画像はステージ別組木で始めたとき）</figcaption></figure>
+</div>
+
+<h2 id="gimmick">6. ステージの仕掛け（ギミック）</h2>
+<p>1番目の「はじまりの空」には仕掛けがありません。2番目からのステージには、それぞれちがう仕掛けがあります。</p>
+
+<h3>ステージ2 からくり屋敷：回転</h3>
+<p>置き場のピースを<strong>動かさずにタップする</strong>と、90°回ります。何回でも回せます。</p>
+<div class="figs">
+<figure><img src="images/manual/g-rotate1.jpg" width="540" height="1200" loading="lazy" alt="からくり屋敷。回す前の横長のピース"><figcaption><span class="n">1</span>をタップすると…</figcaption></figure>
+<figure><img src="images/manual/g-rotate2.jpg" width="540" height="1200" loading="lazy" alt="からくり屋敷。回して縦長になったピース"><figcaption><span class="n">1</span>縦向きになりました</figcaption></figure>
+</div>
+
+<h3>ステージ3〜5：宝箱・泡・花</h3>
+<div class="figs">
+<figure><img src="images/manual/g-chest.jpg" width="540" height="1200" loading="lazy" alt="宝の島の宝箱"><figcaption><strong>3 宝の島（宝箱）</strong><br><span class="n">1</span>宝箱の数字は、消えるまでの残りの手数です。最初は7手。その前に宝箱のある列を消すと、ボーナスとリトライ+1</figcaption></figure>
+<figure><img src="images/manual/g-bubble.jpg" width="540" height="1200" loading="lazy" alt="深海の泡ブロック"><figcaption><strong>4 深海（泡ブロック）</strong><br><span class="n">1</span><span class="n">2</span>を消すと、上下左右のブロックも一緒に消えます</figcaption></figure>
+<figure><img src="images/manual/g-flower.jpg" width="540" height="1200" loading="lazy" alt="さくらの花ブロック"><figcaption><strong>5 さくら（花ブロック）</strong><br><span class="n">1</span><span class="n">2</span>のように、2つ以上をいっしょに消すとボーナス</figcaption></figure>
+</div>
+
+<h3>ステージ6〜8：星・溶岩・氷</h3>
+<div class="figs">
+<figure><img src="images/manual/g-star.jpg" width="540" height="1200" loading="lazy" alt="銀河の星ブロック"><figcaption><strong>6 銀河（星ブロック）</strong><br><span class="n">1</span>を消すと、その縦と横の1列が全部消えます</figcaption></figure>
+<figure><img src="images/manual/g-lava.jpg" width="540" height="1200" loading="lazy" alt="マグマの溶岩"><figcaption><strong>7 マグマ（溶岩）</strong><br><span class="n">1</span>新しいピースが出るたびに広がります。列をそろえて消しましょう</figcaption></figure>
+<figure><img src="images/manual/g-ice.jpg" width="540" height="1200" loading="lazy" alt="こおりの氷ブロック"><figcaption><strong>8 こおり（氷ブロック）</strong><br><span class="n">1</span>〜<span class="n">3</span>は、1回消しても氷が割れるだけ。もう1回消すとなくなります</figcaption></figure>
+</div>
+
+<h3>ステージ9・10：時限ブロック・虹</h3>
+<div class="figs">
+<figure><img src="images/manual/g-bomb.jpg" width="540" height="1200" loading="lazy" alt="雷雲の時限ブロックと石"><figcaption><strong>9 雷雲（時限ブロック）</strong><br><span class="n">1</span>の数字は、ピースを置くたびに減ります。0になる前に消すと高得点。間に合わないと<span class="n">2</span>石になり、2回消さないとなくなりません</figcaption></figure>
+<figure><img src="images/manual/g-rainbow.jpg" width="540" height="1200" loading="lazy" alt="虹の丘の虹ブロック"><figcaption><strong>10 虹の丘（虹ブロック）</strong><br><span class="n">1</span>のように1列を全部同じ色で消すと、その列の得点が3倍。虹ブロックはどの色にもなります。<span class="n">2</span>のように虹の付いたピースも出ます</figcaption></figure>
+</div>
+
+<h2 id="retry">7. リトライ</h2>
+<p>置きまちがえたときは、今の3つのピースが出たときまで戻せます。1ゲームに3回までです（宝箱で増えることがあります）。</p>
+<div class="figs">
+<figure><img src="images/manual/retry-btn.jpg" width="540" height="1200" loading="lazy" alt="ゲーム画面のリトライのボタン"><figcaption><span class="n">1</span>「↶ リトライ」を押します。3つのうち1つでも置くと押せるようになります</figcaption></figure>
+<figure><img src="images/manual/retry.jpg" width="540" height="1200" loading="lazy" alt="リトライの確認"><figcaption><span class="n">1</span>「はい」で戻ります <span class="n">2</span>「いいえ」でそのまま続けます</figcaption></figure>
+</div>
+<ul>
+<li>3つとも置いて新しいピースが出たあとは、その前には戻れません</li>
+<li>戻ると、その間に取った得点も元に戻ります</li>
+</ul>
+
+<h2 id="over">8. ゲームオーバーとふりかえり</h2>
+<p>残っているピースが、どこにも置けなくなるとゲームオーバーです。</p>
+<div class="figs">
+<figure><img src="images/manual/noroom.jpg" width="540" height="1200" loading="lazy" alt="盤面が灰色になったゲームオーバーの画面"><figcaption>盤面が灰色になり、<span class="n">1</span>のお知らせが出ます。画面をタップするか、少し待つと結果に進みます</figcaption></figure>
+<figure><img src="images/manual/over.jpg" width="540" height="1200" loading="lazy" alt="ゲームオーバーの結果の画面"><figcaption><span class="n">1</span>はじめから遊ぶ <span class="n">2</span>少し前に戻ってリトライ <span class="n">3</span>ふりかえり <span class="n">4</span>友達に送る（ベストを更新したとき） <span class="n">5</span>ゲームをやめる</figcaption></figure>
+<figure><img src="images/manual/review.jpg" width="540" height="1200" loading="lazy" alt="ふりかえりの画面"><figcaption>ふりかえり：色の付いたブロックが「あなたの手」、緑の枠が「最適な手」です。下に理由が出ます。◀ ▶ でほかの手も見られます</figcaption></figure>
+<figure><img src="images/manual/quit.jpg" width="540" height="1200" loading="lazy" alt="ゲームをやめるときの確認"><figcaption>リトライが残っているときに「ゲームをやめる」を押すと確認が出ます。<span class="n">1</span>「はい」でタイトルへ戻り、リトライできなくなります <span class="n">2</span>「いいえ」で結果に戻ります</figcaption></figure>
+</div>
+<ul>
+<li>「ふりかえり」は、最後に出た3つのピースで置いた手を、最適な手と比べます。結果の画面で「分析中…」の間は、少し待ってください</li>
+<li>ゲームオーバーのあとでも、リトライが残っていれば続けられます</li>
+</ul>
+
+<h2 id="stages">9. ステージ別組木</h2>
+<p>10のステージから1つを選んで、そのステージだけを遊びます。ステージは変わりません。ベストスコアはステージごとに記録します。</p>
+<div class="figs">
+<figure><img src="images/manual/stages.jpg" width="540" height="1200" loading="lazy" alt="ステージ別組木の選択画面"><figcaption>タイトルの「🗺 ステージ別組木」を押し、<span class="n">1</span>のように遊びたいステージを押します。右下の 👑 はそのステージのベストスコアです</figcaption></figure>
+</div>
+<p>はじめから全部のステージを選べます。途中のゲームがあるときは「新しいゲームを始めますか？」と確認が出ます。「はい」を押すと、途中のゲームの続きは消えます。</p>
+
+<h2 id="puzzle">10. 詰め組木</h2>
+<p>決まったピースを<strong>全部使って、盤面を空にする</strong>パズルです。「入門・初級・中級・上級・達人」の5段階に10問ずつ、全部で50問あります。</p>
+<div class="figs">
+<figure><img src="images/manual/puzzles.jpg" width="540" height="1200" loading="lazy" alt="詰め組木の問題の一覧"><figcaption><span class="n">1</span>段階を選ぶ <span class="n">2</span>問題を選ぶ。⭐ はクリアした問題、🔒 は前の問題をクリアすると開きます</figcaption></figure>
+<figure><img src="images/manual/puzzle.jpg" width="540" height="1200" loading="lazy" alt="詰め組木の問題の画面"><figcaption><span class="n">1</span>使うピース（全部使う） <span class="n">2</span>やり直し <span class="n">3</span>ヒント。左上の ◀ で一覧に戻ります</figcaption></figure>
+<figure><img src="images/manual/hint.jpg" width="540" height="1200" loading="lazy" alt="ヒントで光った場所"><figcaption>ヒント：光っているピースを、<span class="n">1</span>の光る場所に置きます</figcaption></figure>
+<figure><img src="images/manual/pclear.jpg" width="540" height="1200" loading="lazy" alt="詰め組木のクリア画面"><figcaption>クリア！ <span class="n">1</span>次の問題へ <span class="n">2</span>一覧へ戻る</figcaption></figure>
+<figure><img src="images/manual/pfail.jpg" width="540" height="1200" loading="lazy" alt="詰め組木の失敗の画面"><figcaption>盤面が空にならなかったときは、<span class="n">1</span>「↺ やり直し」で何回でも挑戦できます</figcaption></figure>
+</div>
+<ul>
+<li>列がそろうと消えるのは、通常モードと同じです。<strong>先に列を消さないと置けないピース</strong>もあるので、置く順番が大事です</li>
+<li>ヒントは、広告を見ると次の1手が出ます。2手目まで使えます</li>
+<li>「この盤面からは解けません。やり直しましょう」と出たら、「やり直し」を押してください。このときは広告は出ません</li>
+<li>通常モードの途中で詰め組木を遊んでも、タイトルに戻れば「つづきから」で続きを遊べます</li>
+</ul>
+
+<h2 id="records">11. ベスト記録と友達への共有</h2>
+<p>通常モードとステージ別組木では、ベストを更新してゲームオーバーになると、そのときの盤面の画像を保存します。</p>
+<div class="figs">
+<figure><img src="images/manual/records.jpg" width="540" height="1200" loading="lazy" alt="ベスト記録の一覧"><figcaption>タイトルの「🏆 ベスト記録」を押すと一覧が出ます。<span class="n">1</span>のように画像のある記録を押します</figcaption></figure>
+<figure><img src="images/manual/record.jpg" width="540" height="1200" loading="lazy" alt="ベスト記録の画像"><figcaption><span class="n">1</span>「友達に送る」を押し、LINE やメッセージなど送るアプリを選びます</figcaption></figure>
+</div>
+<ul>
+<li>保存するのは、通常モードと各ステージの最新の1枚です。詰め組木の記録はありません</li>
+<li>「次にベストを更新すると保存されます」と出ている記録には、まだ画像がありません</li>
+<li>ゲームオーバーの結果の画面にある「友達に送る」からも、同じように送れます</li>
+</ul>
+
+<h2 id="settings">12. 設定</h2>
+<div class="figs">
+<figure><img src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面"><figcaption><span class="n">1</span>BGM の音量 <span class="n">2</span>効果音の音量（ほめる声も） <span class="n">3</span>振動の ON・OFF <span class="n">4</span>言語 <span class="n">5</span>プライバシーポリシー</figcaption></figure>
+<figure><img src="images/manual/lang.jpg" width="540" height="1200" loading="lazy" alt="言語の一覧"><figcaption>12の言語から選べます。<span class="n">1</span>「自動（端末の言語）」にすると、スマホの言語に合わせます</figcaption></figure>
+</div>
+<ul>
+<li>タイトルの「⚙ 設定」か、ゲーム画面の右上の「⚙」で開きます</li>
+<li>音量は、丸いつまみを左右に動かします。0% にすると音が出なくなります</li>
+<li>広告の同意が必要な地域では、「広告のプライバシー設定」も出ます</li>
+</ul>
+
+<h2 id="ads">13. 広告について</h2>
+<p>無料で遊べるかわりに、次のときに広告が出ることがあります。ピースを置いている途中には出ません。</p>
+<ul>
+<li>通常モード・ステージ別組木：ゲームオーバーの結果の画面が開くとき（リトライしてすぐにまたゲームオーバーになったときは出ません）</li>
+<li>詰め組木：15回遊ぶごとに、次に画面が切り替わるとき</li>
+<li>詰め組木のヒント：自分で「🎬 ヒント」を押したとき</li>
+</ul>
+
+<h2 id="faq">14. よくある質問</h2>
+<h3>インターネットにつながなくても遊べますか？</h3>
+<p>遊べます。つながっていないときは広告が出ません。詰め組木のヒントは、1手目だけ広告なしで出ます。</p>
+<h3>記録はどこに保存されますか？</h3>
+<p>この端末の中だけです。運営者のサーバーには送りません。アプリを消すと、記録も消えます。ほかの端末へ移すことはできません。</p>
+<h3>アプリを閉じたら、途中のゲームが消えました</h3>
+<p>途中のゲームは、アプリを終了すると消えます（ほかのアプリを使っている間に、スマホが自動でアプリを終了することもあります）。ベストスコアやベスト記録は残ります。</p>
+<h3>リトライのボタンが押せません</h3>
+<p>今の3つのピースを1つも置いていないときは押せません。「残り0回」のときは、そのゲームではもう使えません。</p>
+<h3>音が出ません</h3>
+<p>スマホの音量（メディアの音量）と、設定の「BGM」「効果音」を確かめてください。</p>
+<h3>記録を全部消したい</h3>
+<p>スマホの「設定」→「アプリ」→「Block KUMIKI」→「ストレージ」で、データを消してください（機種によって名前がちがうことがあります）。設定や詰め組木の進み具合も消え、元に戻せません。</p>
+<h3>データの扱いを詳しく知りたい</h3>
+<p><a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<h2>お問い合わせ</h2>
+<p>DNGG-studio：<a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
+<p><a href="./">紹介ページへ戻る</a></p>
+
+<section class="dngg-apps" data-mode="others" data-current="kumiki" data-lang="ja">
+<p><a href="../">DNGG-studio のアプリ一覧</a></p>
+</section>
+<script src="../apps.js" defer></script>
+</body>
+</html>
