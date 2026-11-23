@@ -43,6 +43,15 @@
       }
     },
     {
+      id: 'tabi-log', category: 'tool', icon: true, manual: true,
+      shots: [['1', '経路と写真の地図', 'Route and photos on a map'], ['2', '旅のスライドショー', 'Trip slideshow'], ['3', 'その日の移動の全体', 'The day at a glance'], ['4', '立ち寄りと滞在時間', 'Stops and length of stay']], enShots: true,
+      name: { ja: 'たびログ', en: 'TabiLog' },
+      desc: {
+        ja: '歩いた道・立ち寄った場所・写真を記録。旅を地図とスライドショーで振り返り、動画にも。',
+        en: 'Record your route, stops and photos, then relive the trip as a slideshow or video.'
+      }
+    },
+    {
       id: 'kumiki', category: 'game', icon: true, manual: false,
       shots: [['1', 'タイトル画面', 'Title screen'], ['2', 'プレイ画面', 'Gameplay'], ['karakuri', 'からくり屋敷のステージ', 'Karakuri house stage'], ['4', '銀河のステージ', 'Galaxy stage']], enShots: true,
       name: { ja: 'Block KUMIKI', en: 'Block KUMIKI' },
