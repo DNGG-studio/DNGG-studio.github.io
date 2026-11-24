@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使い方 - しゃべる時計（Talking Clock）</title>
+<meta name="description" content="しゃべる時計（Talking Clock）の使い方。時報、お知らせ、お薬リマインダー、声の設定、充電中だけしゃべる、着せ替え。">
+<style>body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.5em}img{max-width:100%;height:auto}.shot{display:block;max-width:240px;border-radius:8px;margin:12px 0;border:1px solid #ddd}.shots{display:flex;flex-wrap:wrap;gap:12px}.toc{background:#f3f5f9;border-radius:8px;padding:12px 16px 12px 36px}.note{font-size:.9em;color:#555}.tip{background:#eef3fb;border-left:4px solid #3d6bd9;padding:8px 12px;margin:12px 0}ol li,ul li{margin:.2em 0}</style>
+</head>
+<body>
+<p><a href="./">しゃべる時計 の紹介ページへ戻る</a></p>
+<h1>しゃべる時計 の使い方</h1>
+<p>しゃべる時計（Talking Clock）は、時刻を声で知らせる時計のアプリです。決めた時刻のお知らせや、お薬を飲む時間のリマインダーも声で読み上げます。</p>
+<p class="note">この説明は バージョン 0.1.0 の画面に合わせています（2026年11月24日）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
+
+<ol class="toc">
+<li><a href="#start">はじめに</a></li>
+<li><a href="#clock">時計の画面</a></li>
+<li><a href="#chime">時報を決める</a></li>
+<li><a href="#announce">お知らせを作る</a></li>
+<li><a href="#medicine">お薬リマインダー</a></li>
+<li><a href="#voice">声の設定（声の種類・あいさつ・充電中だけしゃべる）</a></li>
+<li><a href="#themes">着せ替えと文字盤</a></li>
+<li><a href="#faq">よくある質問</a></li>
+</ol>
+
+<h2 id="start">1. はじめに</h2>
+<ol>
+<li>アプリを開き、通知の許可を聞かれたら「許可」を押します（画面を見ていないときに、時刻・お知らせ・お薬を通知で知らせるため）</li>
+<li>設定の画面の上に「時刻ちょうどに鳴らす許可がないため…」と出たら、「許可する」を押し、開いた画面でこのアプリをオンにします（時報が少し遅れないようにするため）</li>
+<li>音はメディアの音量で鳴ります。聞こえないときは、端末の音量ボタンでメディアの音量を上げてください</li>
+</ol>
+
+<h2 id="clock">2. 時計の画面</h2>
+<img class="shot" src="images/manual/clock.jpg" width="540" height="1200" loading="lazy" alt="時計の画面。お薬のカードの飲んだのボタン、いまの時刻を読むのボタン、設定のボタン">
+<ol>
+<li><strong>「✓ 飲んだ」</strong>：お薬の時間になると出るカードです。飲んだら押します（<a href="#medicine">5.</a>）</li>
+<li><strong>「🔊 いまの時刻を読む」</strong>：押すと、いまの時刻を声で読みます。読んでいるあいだは「■」で止められます</li>
+<li><strong>「⚙」</strong>：設定の画面を開きます</li>
+</ol>
+<ul>
+<li>日付・時刻の下に「次のお知らせ」の時刻が出ます</li>
+<li>Google カレンダーをつなぐと、「今日の予定」の欄に今日の予定が出ます（今は準備中です）</li>
+<li>設定の「画面をつけたままにする」が ON なら、時計の画面は消えません。置き時計として使えます</li>
+</ul>
+
+<h2 id="chime">3. 時報を決める</h2>
+<img class="shot" src="images/manual/settings-chime.jpg" width="540" height="1200" loading="lazy" alt="設定の時報のカード">
+<ol>
+<li><strong>「時報を鳴らす」</strong>：ON にすると、決めた間隔で時刻を読みます</li>
+<li><strong>「間隔」</strong>：1 分〜12 時間から選びます。「開始」「終了」で鳴らす時間帯を決めます（夜をまたいでもかまいません）</li>
+<li><strong>「曜日」</strong>：鳴らす曜日を押して選びます</li>
+</ol>
+<ul>
+<li>「読み上げの前に音を鳴らす」が ON なら、読む前に「ピン・ポーン」と鳴ります</li>
+<li>時刻は「3時ちょうどです」「3時半です」のように読みます</li>
+</ul>
+
+<h2 id="announce">4. お知らせを作る</h2>
+<p>決めた時刻に、好きな文を読み上げたり、音声ファイルを流したりできます。設定の「お知らせ」を押して開きます。</p>
+<div class="shots">
+<img class="shot" src="images/manual/announcements.jpg" width="540" height="1200" loading="lazy" alt="お知らせの一覧">
+<img class="shot" src="images/manual/announcement-edit.jpg" width="540" height="1200" loading="lazy" alt="お知らせの編集">
+</div>
+<p>一覧（左）で「＋ 追加」を押すか、作ったお知らせを押すと、編集の画面（右）が開きます。</p>
+<ol>
+<li>時刻を押して選びます。その下で曜日を選び、「名前（メモ）」を入れます</li>
+<li><strong>「読み上げる文」</strong>か<strong>「音声ファイル」</strong>を選び、読む文を入れるか、「音声ファイルを選ぶ」で端末の音声を選びます</li>
+<li><strong>「声の種類」</strong>：読み上げる文の声を選べます。「時報と同じ」のままなら、設定の声で読みます</li>
+<li><strong>「▶ 再生」</strong>：試しに流します</li>
+<li><strong>「保存」</strong>を押します</li>
+</ol>
+<p>一覧の右のスイッチで、お知らせごとに ON / OFF できます。</p>
+
+<h2 id="medicine">5. お薬リマインダー</h2>
+<p>お薬を飲む時間を登録しておくと、その時刻に声と通知で知らせます。「飲んだ」を押すまで、何回か知らせ直します。</p>
+<h3>お薬を登録する</h3>
+<div class="shots">
+<img class="shot" src="images/manual/settings-medicine.jpg" width="540" height="1200" loading="lazy" alt="設定のお薬のカード">
+<img class="shot" src="images/manual/medicine-list.jpg" width="540" height="1200" loading="lazy" alt="お薬リマインダーの一覧">
+<img class="shot" src="images/manual/medicine-edit.jpg" width="540" height="1200" loading="lazy" alt="お薬の編集">
+</div>
+<ol>
+<li>設定の「お薬」のカードの<strong>「お薬リマインダー」</strong>を押します（左の画像の 1）</li>
+<li>一覧（真ん中）の<strong>「＋ 追加」</strong>を押します。作ったお薬を直すときは、お薬の名前を押します</li>
+<li>編集の画面（右）で、<strong>「お薬の名前」</strong>（例：血圧の薬）を入れ、<strong>時刻</strong>を押して飲む時刻を選び、飲む<strong>曜日</strong>を押して選びます</li>
+<li><strong>「保存」</strong>を押します</li>
+</ol>
+<ul>
+<li>朝・昼・晩など 1 日に何回も飲むときは、時刻ごとに 1 つずつ登録します</li>
+<li>一覧の右のスイッチで、お薬ごとに ON / OFF できます。やめるときは編集の画面の「削除」を押します</li>
+</ul>
+<h3>お薬の時間になったら</h3>
+<ol>
+<li>「ピン・ポーン」のあと「お薬の時間です。血圧の薬を飲んでください。」と読み上げます</li>
+<li>通知と、時計の画面のカードが出ます（<a href="#clock">2.</a> の画像の 1）</li>
+<li>飲んだら、時計の画面のカードか、通知の<strong>「飲んだ」</strong>を押します。カードと通知が消えます</li>
+</ol>
+<div class="tip">「飲んだ」を押さないと、決めた間隔ごとに「血圧の薬は飲みましたか？」と知らせ直します。決めた回数を知らせ終わっても、カードは「飲んだ」を押すまで残ります。</div>
+<h3>知らせ直す回数と間隔を変える</h3>
+<img class="shot" src="images/manual/remind-count.jpg" width="540" height="1200" loading="lazy" alt="リマインドの回数を選ぶ窓">
+<ul>
+<li>設定の「お薬」のカードの<strong>「「飲んだ」がないときのリマインド」</strong>を押し、「しない」〜「10回」から選びます（はじめは 3 回）</li>
+<li><strong>「リマインドの間隔」</strong>を押し、1 分〜60 分から選びます（はじめは 5 分ごと）</li>
+</ul>
+
+<h2 id="voice">6. 声の設定</h2>
+<img class="shot" src="images/manual/settings-voice.jpg" width="540" height="1200" loading="lazy" alt="設定の声のカード">
+<p>「話す速さ」「声の高さ」は、つまみを左右に動かして変えます。</p>
+<ol>
+<li><strong>「声の種類」</strong>：押すと、端末に入っている声の一覧が出ます（下の画像）</li>
+<li><strong>「あいさつを付ける」</strong>：ON にすると、時報の前に「おはようございます」（4〜10 時）・「こんにちは」（11〜17 時）・「こんばんは」と言います</li>
+<li><strong>「充電中だけしゃべる」</strong>：ON にすると、電源につないでいるときだけ、時報・お知らせ・お薬を声で読みます。充電していないときは声で読まず、通知だけ出します（お薬はカードも出ます）</li>
+<li><strong>「試しに聞く」</strong>：いまの設定で時刻を読みます</li>
+</ol>
+<div class="tip">「充電中だけしゃべる」は、家では充電台に置いてしゃべらせ、持ち歩くときは静かにしたいときに便利です。「いまの時刻を読む」など自分で押したときは、充電していなくても読みます。</div>
+<h3>声の種類を選ぶ</h3>
+<img class="shot" src="images/manual/voice-dialog.jpg" width="540" height="1200" loading="lazy" alt="声の種類を選ぶ窓">
+<ol>
+<li>声を押すと、その声ですぐ試しに読みます。気に入った声を選んで「OK」を押します。「おまかせ」は、ネットなしで使える声のうち、いちばん良い声を自動で選びます</li>
+<li><strong>「声のデータを追加」</strong>：端末の読み上げの設定を開き、声のデータを追加できます</li>
+</ol>
+<ul>
+<li>「ネット」の印がある声は、インターネットにつながっているときだけ使え、通信量を少し使います</li>
+<li>声の数や声は、端末によって違います</li>
+</ul>
+
+<h2 id="themes">7. 着せ替えと文字盤</h2>
+<p>設定の画面のいちばん上の見本か、「着せ替え」を押して開きます。</p>
+<div class="shots">
+<img class="shot" src="images/manual/themes.jpg" width="540" height="1200" loading="lazy" alt="着せ替えの画面の上">
+<img class="shot" src="images/manual/themes-categories.jpg" width="540" height="1200" loading="lazy" alt="着せ替えのカテゴリーの一覧">
+</div>
+<ol>
+<li><strong>文字盤</strong>：上に、いまの背景に重ねた見本が横に並びます。左右になぞって、押して選びます（細い・太い・明朝・7 セグメント・針の時計など）</li>
+<li><strong>「文字の大きさ」</strong>：つまみで時刻の大きさを変えます</li>
+<li><strong>カテゴリー</strong>：森林・海・夜空などの風景や、猫・犬・ウサギなどのかわいい写真のカテゴリーを押すと、見本が並びます。見本を押すと切り替わります</li>
+</ol>
+<ul>
+<li>写真は、はじめて選んだときにダウンロードします（1 枚 0.5MB ほど）</li>
+<li>「自分の写真」を押すと、端末の写真を背景にできます</li>
+</ul>
+
+<h2 id="faq">8. よくある質問</h2>
+<h3>時報が鳴りません・遅れます</h3>
+<p>設定の「時報を鳴らす」が ON か、時間帯と曜日が合っているかを確かめてください。設定の上に「時刻ちょうどに鳴らす許可がない」と出ているときは「許可する」を押してください。「充電中だけしゃべる」が ON のときは、充電していないと声では読みません。</p>
+<h3>声が聞こえません</h3>
+<p>メディアの音量を上げてください。端末の読み上げの機能（Google 音声サービスなど）が入っていないと読み上げられません。設定の「声の種類」の「声のデータを追加」から入れてください。</p>
+<h3>読み上げに料金はかかりますか？</h3>
+<p>かかりません。端末に入っている読み上げの機能を使っています。「ネット」の印がある声は、通信量を少し使います。</p>
+<h3>お薬の「飲んだ」を押し忘れました</h3>
+<p>カードは押すまで残ります。あとから押してもかまいません。同じお薬の次の時刻が来ると、新しい時刻のカードに変わります。</p>
+<h3>データの扱いを詳しく知りたい</h3>
+<p><a href="privacy.html">プライバシーポリシー</a>をご覧ください。設定・お知らせ・お薬は、この端末の中にだけ保存します。</p>
+
+<h2>お問い合わせ</h2>
+<p>DNGG-studio：<a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
+<p class="note">本アプリは医療機器ではありません。お薬の飲み方は、医師・薬剤師の指示に従ってください。写真：<a href="https://unsplash.com/">Unsplash</a>。</p>
+<p><a href="./">紹介ページへ戻る</a></p>
+<section class="dngg-apps" data-mode="others" data-current="talking-clock" data-lang="ja">
+<p><a href="../">DNGG-studio のアプリ一覧</a></p>
+</section>
+<script src="../apps.js" defer></script>
+</body>
+</html>
