@@ -11,7 +11,7 @@
 <p><a href="./">おはようニュースタイマー の紹介ページへ戻る</a></p>
 <h1>おはようニュースタイマー の使い方</h1>
 <p>おはようニュースタイマー（Good Morning News Timer）は、決めた時刻にニュースの再生を自動で始めるアプリです。</p>
-<p class="note">この説明は バージョン 0.1.0 の画面に合わせています（2026年11月25日、NAS のフォルダをたどる画面を追加）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
+<p class="note">この説明は バージョン 0.1.0 の画面に合わせています（2026年11月25日、デザインを新しくしました）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
 
 <ol class="toc">
 <li><a href="#start">はじめに（許可）</a></li>
@@ -40,10 +40,10 @@
 <h2 id="home">2. ホームの画面</h2>
 <img class="shot" src="images/manual/home.jpg" width="540" height="1200" loading="lazy" alt="ホームの画面">
 <ol>
-<li><strong>「次の再生」</strong>：次に再生する曜日と時刻です</li>
+<li>次に再生する曜日と時刻、最初に試す情報源と、それまでの残りの時間です</li>
 <li>予定を押すと編集できます。右のスイッチで ON / OFF を切り替えます</li>
-<li><strong>「▶ いま再生」</strong>：その予定の内容を、すぐに試せます</li>
-<li><strong>「情報源」</strong>：再生するページ・URL・NAS を見たり足したりします</li>
+<li><strong>▶</strong>：その予定の内容を、すぐに試せます</li>
+<li><strong>「情報源」</strong>：再生するページ・URL・NAS を見たり足したりします。下のタブで「ホーム」「情報源」「設定」を切り替えます</li>
 </ol>
 
 <h2 id="alarm">3. 予定を作る</h2>
@@ -55,8 +55,8 @@
 <ol>
 <li>時刻を押し、時計の窓（右）で時と分を選んで<strong>「OK」</strong>を押します</li>
 <li><strong>「曜日」</strong>：再生する曜日を押して選びます</li>
-<li><strong>「情報源」</strong>：使うものにチェックを付けます。番号の順に試します</li>
-<li><strong>「上へ」</strong>：試す順を上げます</li>
+<li><strong>「情報源」</strong>：使うものを押すと番号が付きます。番号の順に試します。もう一度押すと外れます</li>
+<li><strong>上向きの矢印</strong>：試す順を上げます</li>
 </ol>
 <img class="shot" src="images/manual/edit-bottom.jpg" width="540" height="1200" loading="lazy" alt="予定の編集の下のほう">
 <ol>
@@ -66,15 +66,19 @@
 </ol>
 
 <h2 id="player">4. 再生の画面</h2>
+<div class="shots">
+<img class="shot" src="images/manual/waiting.jpg" width="540" height="1200" loading="lazy" alt="音が出るまでの画面">
 <img class="shot" src="images/manual/player.jpg" width="540" height="1200" loading="lazy" alt="再生の画面">
+</div>
+<p>音が出るまでは、夜明けの空と時計（左）が出ます。画面を押すと、後ろのページを見られます。音が出ると再生の画面（右）に変わります。</p>
 <ol>
-<li>いま再生している情報源の名前です</li>
-<li><strong>「次の情報源」</strong>：予定の次の情報源に切り替えます</li>
-<li><strong>「停止」</strong>：再生を止めて、音量を元に戻します</li>
+<li>いま再生している情報源やファイルの名前です</li>
+<li><strong>次の情報源</strong>のボタン：予定の次の情報源に切り替えます</li>
+<li><strong>停止</strong>のボタン：再生を止めて、音量を元に戻します</li>
 </ol>
 <ul>
 <li>45 秒ほど待っても音が出ないときは、自動で次の情報源に進みます</li>
-<li>予定の情報源がどれも再生できないときは、代わりにアラームを鳴らします。「停止」で止まります</li>
+<li>予定の情報源がどれも再生できないときは、代わりにアラームを鳴らします。停止のボタンで止まります</li>
 </ul>
 
 <h2 id="sources">5. 情報源</h2>
@@ -82,7 +86,7 @@
 <ol>
 <li><strong>「URL を追加」</strong>：<a href="#url">6.</a> へ</li>
 <li><strong>「NAS を追加」</strong>：<a href="#nas">7.</a> へ</li>
-<li><strong>「▶ いま再生」</strong>：その情報源を試します</li>
+<li><strong>▶</strong>：その情報源を試します</li>
 </ol>
 <p>自分で足したものは、押すと直したり消したりできます。最初からあるものは直せません。</p>
 
@@ -91,9 +95,9 @@
 <ol>
 <li><strong>「名前」</strong>：一覧に出す名前です（空でもかまいません）</li>
 <li><strong>「URL」</strong>：ニュースのページ、YouTube、動画・音声（m3u8・mp4・mp3 など）の URL を入れます</li>
-<li><strong>「保存」</strong>を押します。予定で使うには、予定の編集でチェックを付けます</li>
+<li><strong>「保存」</strong>を押します。予定で使うには、予定の編集で選びます</li>
 </ol>
-<div class="tip">ページによっては、自動で再生が始まらないことがあります。「▶ いま再生」で試してから予定に使ってください。ログインが必要なページには向きません。</div>
+<div class="tip">ページによっては、自動で再生が始まらないことがあります。▶ で試してから予定に使ってください。ログインが必要なページには向きません。</div>
 
 <h2 id="nas">7. NAS を追加する</h2>
 <p>「情報源」の「NAS を追加」を押します。画像のアドレスは見本です。</p>
@@ -121,7 +125,7 @@
 <ol>
 <li><strong>「このフォルダを使う」</strong>：いまのフォルダに決めます</li>
 <li>中の新しいファイルの名前が 5 件まで出ます。目当てのフォルダかどうかの目印にしてください</li>
-<li><strong>「上のフォルダへ」</strong>：1 つ戻ります。端末の「戻る」でもかまいません</li>
+<li><strong>上向きの矢印</strong>：1 つ上のフォルダに戻ります。端末の「戻る」でもかまいません</li>
 </ol>
 <ul>
 <li>フォルダの場所は、<code>\\192.168.1.10\video\news</code> のように直接入れることもできます</li>
@@ -133,8 +137,8 @@
 <h2 id="settings">8. 設定</h2>
 <img class="shot" src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面">
 <ol>
-<li><strong>「プライバシーポリシー」</strong>：このサイトのページを開きます</li>
 <li><strong>「言語」</strong>：12 言語から選べます。「自動」なら端末の言語です</li>
+<li><strong>「プライバシーポリシー」</strong>：このサイトのページを開きます</li>
 </ol>
 
 <h2 id="faq">9. よくある質問</h2>
