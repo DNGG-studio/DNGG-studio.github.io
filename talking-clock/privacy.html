@@ -9,7 +9,7 @@
 <body>
 <p><a href="./">しゃべる時計</a></p>
 <h1>しゃべる時計 プライバシーポリシー</h1>
-<p>制定日：2026年11月19日<br>改定日：2026年11月24日（お薬リマインダーを追加）<br>改定日：2026年11月25日（天気を追加）</p>
+<p>制定日：2026年11月19日<br>改定日：2026年11月24日（お薬リマインダーを追加）<br>改定日：2026年11月25日（天気・直近の予定を追加）</p>
 <p>DNGG-studio（以下「運営者」）は、Android アプリ「しゃべる時計」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは時刻を表示し、時報やお知らせを声で知らせ、利用者が望むときは Google カレンダーの今日の予定を読み上げる時計のアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong></p>
 
 <h2>1. Google アカウントから受け取る情報と使い方</h2>
@@ -17,14 +17,14 @@
 <table>
 <tr><th>情報</th><th>使い方</th><th>許可の範囲（スコープ）</th></tr>
 <tr><td>Google アカウントのメールアドレス</td><td>つないだアカウントを設定の画面に表示するため</td><td>ログイン時の基本情報</td></tr>
-<tr><td>今日の予定（タイトル・時刻・終日かどうか）</td><td>時計の画面の「今日の予定」の欄に表示し、利用者が押したとき・決めた時刻に読み上げるため</td><td><code>calendar.events.readonly</code></td></tr>
+<tr><td>今日の予定と、直近の予定を出す設定にしたときは今日から 30 日の予定（タイトル・日時・終日かどうか）</td><td>時計の画面の予定の欄に表示し、今日の予定を利用者が押したとき・決めた時刻に読み上げるため</td><td><code>calendar.events.readonly</code></td></tr>
 <tr><td>カレンダーの一覧</td><td>予定を読むカレンダーを見つけるため</td><td><code>calendar.calendarlist.readonly</code></td></tr>
 </table>
 
 <h2>2. Google API Services User Data Policy への準拠</h2>
 <p>本アプリが Google API から受け取った情報の使用と他のアプリへの転送は、限定使用の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> に従います。具体的には次のとおりです。</p>
 <ul>
-<li>Google から受け取った情報は、今日の予定の表示と読み上げのためだけに使います</li>
+<li>Google から受け取った情報は、予定の表示と今日の予定の読み上げのためだけに使います</li>
 <li>広告の表示や配信、ターゲティングのために使いません</li>
 <li>販売しません。運営者を含む第三者に転送しません</li>
 <li>運営者や他の人が読むことはありません</li>
@@ -91,7 +91,7 @@
 <hr>
 <div lang="en">
 <h1>Talking Clock Privacy Policy</h1>
-<p>Effective: November 19, 2026<br>Updated: November 24, 2026 (added medicine reminders)<br>Updated: November 25, 2026 (added weather)</p>
+<p>Effective: November 19, 2026<br>Updated: November 24, 2026 (added medicine reminders)<br>Updated: November 25, 2026 (added weather and upcoming events)</p>
 <p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Talking Clock" ("the app"). The app shows the time, announces the time and your custom alerts out loud, and, if you choose, reads today's events from your Google Calendar. <strong>We run no servers, and we never collect your information.</strong></p>
 
 <h2>1. Information from your Google Account and how we use it</h2>
@@ -99,14 +99,14 @@
 <table>
 <tr><th>Information</th><th>How it is used</th><th>Scope</th></tr>
 <tr><td>Your Google Account email address</td><td>To show the connected account in the settings</td><td>Basic sign-in information</td></tr>
-<tr><td>Today's events (title, time, all-day or not)</td><td>To show them in the "Today" panel on the clock and read them out when you tap the button or at the time you set</td><td><code>calendar.events.readonly</code></td></tr>
+<tr><td>Today's events, and events in the next 30 days if you choose to show upcoming events (title, date and time, all-day or not)</td><td>To show them in the events panel on the clock and read out today's events when you tap the button or at the time you set</td><td><code>calendar.events.readonly</code></td></tr>
 <tr><td>Your calendar list</td><td>To find the calendars to read events from</td><td><code>calendar.calendarlist.readonly</code></td></tr>
 </table>
 
 <h2>2. Google API Services User Data Policy</h2>
 <p>The app's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular:</p>
 <ul>
-<li>Information from Google is used only to show and read out today's events</li>
+<li>Information from Google is used only to show events and read out today's events</li>
 <li>It is not used to serve, deliver or target ads</li>
 <li>It is not sold, and it is not transferred to anyone, including us</li>
 <li>No human, including us, reads it</li>
