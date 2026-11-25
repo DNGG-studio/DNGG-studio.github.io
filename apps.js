@@ -34,6 +34,15 @@
       }
     },
     {
+      id: 'morning-news', category: 'tool', icon: false, manual: true,
+      shots: [['1', '予定の一覧', 'Schedules'], ['2', '予定の編集', 'Edit a schedule'], ['3', '情報源の一覧', 'Sources'], ['4', 'NAS の設定', 'NAS settings']], enShots: false,
+      name: { ja: 'おはようニュースタイマー', en: 'Good Morning News Timer' },
+      desc: {
+        ja: '決めた時刻に、ニュースの再生を自動で開始。URL の追加や NAS の動画にも対応。',
+        en: 'Starts playing the news at the time you set. Supports your own URLs and NAS.'
+      }
+    },
+    {
       id: 'food-tag', category: 'tool', icon: true, manual: true,
       shots: [['1', '経過日数と期限の色が並ぶ一覧', 'Days stored and expiry colors'], ['2', '番号を打つだけで入れる', 'Just type the number'], ['3', '写真と名前の付いた食品', 'Food with a photo and name'], ['4', '使用中と空きの番号', 'Numbers in use and free']], enShots: true,
       name: { ja: 'たべもの番号帳', en: 'Food Tag Log' },
