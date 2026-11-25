@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>使い方 - おはようニュースタイマー（Good Morning News Timer）</title>
-<meta name="description" content="おはようニュースタイマーの使い方。予定の作り方、情報源、URL と NAS の追加、自動再生の許可。">
+<meta name="description" content="おはようニュースタイマーの使い方。予定の作り方、情報源、URL・NAS・DLNA の追加、自動再生の許可。">
 <style>body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.5em}img{max-width:100%;height:auto}.shot{display:block;max-width:240px;border-radius:8px;margin:12px 0;border:1px solid #ddd}.shots{display:flex;flex-wrap:wrap;gap:12px}.toc{background:#f3f5f9;border-radius:8px;padding:12px 16px 12px 36px}.note{font-size:.9em;color:#555}.tip{background:#eef3fb;border-left:4px solid #3d6bd9;padding:8px 12px;margin:12px 0}ol li,ul li{margin:.2em 0}code{word-break:break-all}</style>
 </head>
 <body>
 <p><a href="./">おはようニュースタイマー の紹介ページへ戻る</a></p>
 <h1>おはようニュースタイマー の使い方</h1>
 <p>おはようニュースタイマー（Good Morning News Timer）は、決めた時刻にニュースの再生を自動で始めるアプリです。</p>
-<p class="note">この説明は バージョン 0.1.0 の画面に合わせています（2026年11月25日、デザインを新しくしました）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
+<p class="note">この説明は バージョン 0.1.0 の画面に合わせています（2026年11月26日、DLNA に対応しました）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
 
 <ol class="toc">
 <li><a href="#start">はじめに（許可）</a></li>
@@ -21,6 +21,7 @@
 <li><a href="#sources">情報源</a></li>
 <li><a href="#url">URL を追加する</a></li>
 <li><a href="#nas">NAS を追加する</a></li>
+<li><a href="#dlna">DLNA を追加する</a></li>
 <li><a href="#settings">設定</a></li>
 <li><a href="#faq">よくある質問</a></li>
 </ol>
@@ -43,7 +44,7 @@
 <li>次に再生する曜日と時刻、最初に試す情報源と、それまでの残りの時間です</li>
 <li>予定を押すと編集できます。右のスイッチで ON / OFF を切り替えます</li>
 <li><strong>▶</strong>：その予定の内容を、すぐに試せます</li>
-<li><strong>「情報源」</strong>：再生するページ・URL・NAS を見たり足したりします。下のタブで「ホーム」「情報源」「設定」を切り替えます</li>
+<li><strong>「情報源」</strong>：再生するページ・URL・NAS・DLNA を見たり足したりします。下のタブで「ホーム」「情報源」「設定」を切り替えます</li>
 </ol>
 
 <h2 id="alarm">3. 予定を作る</h2>
@@ -86,6 +87,7 @@
 <ol>
 <li><strong>「URL を追加」</strong>：<a href="#url">6.</a> へ</li>
 <li><strong>「NAS を追加」</strong>：<a href="#nas">7.</a> へ</li>
+<li><strong>「DLNA を追加」</strong>：<a href="#dlna">8.</a> へ</li>
 <li><strong>▶</strong>：その情報源を試します</li>
 </ol>
 <p>自分で足したものは、押すと直したり消したりできます。最初からあるものは直せません。</p>
@@ -134,14 +136,44 @@
 <li>テレビの録画（MPEG-2 TS など）は、端末によって再生できないことがあります</li>
 </ul>
 
-<h2 id="settings">8. 設定</h2>
+<h2 id="dlna">8. DLNA を追加する</h2>
+<p>レコーダー・NAS・PC などの DLNA サーバーのフォルダを選ぶと、その中のいちばん新しい動画・音声を再生します。「情報源」の「DLNA を追加」を押します。</p>
+<img class="shot" src="images/manual/dlna.jpg" width="540" height="1200" loading="lazy" alt="DLNA を追加する画面">
+<ol>
+<li><strong>「フォルダをたどって選ぶ」</strong>：サーバーの中を見ながらフォルダを選びます（下の手順）</li>
+<li><strong>「サブフォルダの中も探す」</strong>：ON なら、中のフォルダも 4 段まで探します</li>
+<li><strong>「接続を確かめる」</strong>：つながると、再生する最新のものの名前が出ます</li>
+<li><strong>「保存」</strong>を押します</li>
+</ol>
+<h3>サーバーを選ぶ</h3>
+<img class="shot" src="images/manual/dlna-servers.jpg" width="540" height="1200" loading="lazy" alt="DLNA サーバーを選ぶ画面">
+<ol>
+<li>同じネットワークのサーバーが見つかると、下に並びます。使うものを押します</li>
+<li>見つからないときは、サーバーのアドレス（例：<code>192.168.1.10</code>）を入れます。機器の説明の URL（<code>http://</code> で始まるもの）でもかまいません</li>
+<li><strong>「開く」</strong>を押します</li>
+</ol>
+<h3>フォルダを選ぶ</h3>
+<img class="shot" src="images/manual/dlna-folder.jpg" width="540" height="1200" loading="lazy" alt="DLNA サーバーのフォルダの中">
+<ol>
+<li><strong>「このフォルダを使う」</strong>：いまのフォルダに決めます</li>
+<li>中の新しいものの名前が 5 件まで出ます。保護された録画には「再生できません」と出ます</li>
+<li><strong>上向きの矢印</strong>：1 つ上のフォルダに戻ります</li>
+</ol>
+<ul>
+<li>レコーダーで録画した地上波・BS などの、著作権保護（DTCP-IP）された録画は再生できません。最新のものを選ぶときも飛ばします</li>
+<li>「最新」は、サーバーが知らせる日付で決めます。日付がなければ名前の中の日付（<code>2026-11-26</code>、<code>20261126_0700</code> など）、それもなければ並びの最後のものを選びます</li>
+<li>予定の時刻に、サーバーの電源が入っていて、同じネットワークにつながっている必要があります。サーバーのアドレスが変わっても、同じ機器を探し直します</li>
+<li>動画の形式（MPEG-2 など）によっては、端末で再生できないことがあります</li>
+</ul>
+
+<h2 id="settings">9. 設定</h2>
 <img class="shot" src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面">
 <ol>
 <li><strong>「言語」</strong>：12 言語から選べます。「自動」なら端末の言語です</li>
 <li><strong>「プライバシーポリシー」</strong>：このサイトのページを開きます</li>
 </ol>
 
-<h2 id="faq">9. よくある質問</h2>
+<h2 id="faq">10. よくある質問</h2>
 <h3>時刻になっても始まりません</h3>
 <p>ホームの画面に許可の案内が出ていないか、予定のスイッチが ON かを確かめてください。端末の設定でアプリを「強制停止」すると、次にアプリを開くまで再生は始まりません。端末の電源が切れているときも始まりません。</p>
 <h3>音が出ません</h3>
