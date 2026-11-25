@@ -9,7 +9,7 @@
 <body>
 <p><a href="./">しゃべる時計</a></p>
 <h1>しゃべる時計 プライバシーポリシー</h1>
-<p>制定日：2026年11月19日<br>改定日：2026年11月24日（お薬リマインダーを追加）</p>
+<p>制定日：2026年11月19日<br>改定日：2026年11月24日（お薬リマインダーを追加）<br>改定日：2026年11月25日（天気を追加）</p>
 <p>DNGG-studio（以下「運営者」）は、Android アプリ「しゃべる時計」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは時刻を表示し、時報やお知らせを声で知らせ、利用者が望むときは Google カレンダーの今日の予定を読み上げる時計のアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong></p>
 
 <h2>1. Google アカウントから受け取る情報と使い方</h2>
@@ -34,7 +34,7 @@
 <h2>3. 端末の中に保存する情報</h2>
 <p>次の情報を利用者の端末の中だけに保存します。本アプリの外へ自動で送信されることはなく、アプリを削除すると消えます。</p>
 <ul>
-<li>設定（時報の時間帯・間隔・曜日、着せ替え、文字盤、時刻の大きさ、声の速さと高さ・種類、あいさつ、充電中だけしゃべる、表示、言語、予定を読む時刻、お薬のリマインドの回数と間隔）</li>
+<li>設定（時報の時間帯・間隔・曜日、着せ替え、文字盤、時刻の大きさ、声の速さと高さ・種類、あいさつ、充電中だけしゃべる、表示、言語、予定を読む時刻、お薬のリマインドの回数と間隔、天気の場所、天気と予定の欄の配置）と、読み込んだ天気予報</li>
 <li>お知らせの一覧（時刻・曜日・読み上げる文と声の種類、または利用者が選んだ音声ファイルの場所と名前）</li>
 <li>お薬リマインダーの一覧（お薬の名前・飲む時刻・曜日）と、まだ「飲んだ」を押していないお薬の時刻</li>
 <li>つないだ Google アカウントのメールアドレス</li>
@@ -50,7 +50,7 @@
 <h2>5. 使う権限</h2>
 <table>
 <tr><th>権限</th><th>理由</th></tr>
-<tr><td>インターネット（INTERNET）</td><td>Google カレンダーの予定を読むため、写真の着せ替えの写真をダウンロードするため</td></tr>
+<tr><td>インターネット（INTERNET）</td><td>Google カレンダーの予定を読むため、写真の着せ替えの写真をダウンロードするため、天気予報を読むため</td></tr>
 <tr><td>通知（POST_NOTIFICATIONS）</td><td>時報・お知らせの時刻に通知を出すため</td></tr>
 <tr><td>正確なアラーム（SCHEDULE_EXACT_ALARM）</td><td>時報・お知らせを時刻ちょうどに鳴らすため（許可しなくても使えます）</td></tr>
 <tr><td>起動時の実行（RECEIVE_BOOT_COMPLETED）</td><td>端末を再起動したあとに、時報・お知らせを予約し直すため</td></tr>
@@ -63,6 +63,7 @@
 <tr><th>送信先</th><th>送る情報</th><th>目的</th></tr>
 <tr><td>Google（Google Calendar API・Google Play 開発者サービス）</td><td>1. の情報を受け取るための要求と、ログインのための情報（Google カレンダーをつないだときだけ）</td><td>今日の予定を読むため。Google での扱いは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>に従います</td></tr>
 <tr><td>Unsplash（images.unsplash.com）</td><td>選んだ写真の URL（写真の ID と大きさ）。通信のしくみ上、端末の IP アドレスなどが送信先に伝わります</td><td>写真の着せ替えを選んだときに、その写真をダウンロードするため。アカウントは使わず、利用者の情報は送りません。Unsplash での扱いは <a href="https://unsplash.com/privacy">Unsplash のプライバシーポリシー</a>に従います</td></tr>
+<tr><td>気象庁（www.jma.go.jp）</td><td>利用者が選んだ地域の番号。通信のしくみ上、端末の IP アドレスなどが送信先に伝わります</td><td>天気を出す設定にしたときに、天気予報を読むため。位置情報・アカウントは使わず、ほかの情報は送りません</td></tr>
 </table>
 <p>時刻・予定・お知らせの文の読み上げには、端末に入っているテキスト読み上げ（Android の TextToSpeech）を使います。読み上げの処理は、利用者が端末で選んでいる読み上げエンジンが行い、その扱いはエンジンを提供する会社のポリシーに従います。</p>
 
@@ -90,7 +91,7 @@
 <hr>
 <div lang="en">
 <h1>Talking Clock Privacy Policy</h1>
-<p>Effective: November 19, 2026<br>Updated: November 24, 2026 (added medicine reminders)</p>
+<p>Effective: November 19, 2026<br>Updated: November 24, 2026 (added medicine reminders)<br>Updated: November 25, 2026 (added weather)</p>
 <p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Talking Clock" ("the app"). The app shows the time, announces the time and your custom alerts out loud, and, if you choose, reads today's events from your Google Calendar. <strong>We run no servers, and we never collect your information.</strong></p>
 
 <h2>1. Information from your Google Account and how we use it</h2>
@@ -115,7 +116,7 @@
 <h2>3. Information stored on your device</h2>
 <p>The following is stored only on your device. It is never sent anywhere automatically and is deleted when you uninstall the app.</p>
 <ul>
-<li>Settings (chime hours, interval and days, theme, clock face, clock size, voice speed, pitch and type, greeting, speak only while charging, display, language, time to read events, medicine reminder count and interval)</li>
+<li>Settings (chime hours, interval and days, theme, clock face, clock size, voice speed, pitch and type, greeting, speak only while charging, display, language, time to read events, medicine reminder count and interval, weather location, place and size of the weather and events panels) and the downloaded forecast</li>
 <li>Your alerts (time, days, the text to read and its voice, or the location and name of the audio file you chose)</li>
 <li>Your medicine reminders (medicine name, time and days) and the times of medicine not yet marked as taken</li>
 <li>The email address of the connected Google Account</li>
@@ -131,7 +132,7 @@
 <h2>5. Permissions</h2>
 <table>
 <tr><th>Permission</th><th>Why</th></tr>
-<tr><td>Internet (INTERNET)</td><td>To read your Google Calendar events and to download photos for photo themes</td></tr>
+<tr><td>Internet (INTERNET)</td><td>To read your Google Calendar events , download photos for photo themes and read the weather forecast</td></tr>
 <tr><td>Notifications (POST_NOTIFICATIONS)</td><td>To show a notification at chime and alert times</td></tr>
 <tr><td>Exact alarms (SCHEDULE_EXACT_ALARM)</td><td>To chime exactly on time (the app works without it)</td></tr>
 <tr><td>Run at startup (RECEIVE_BOOT_COMPLETED)</td><td>To schedule chimes and alerts again after the device restarts</td></tr>
@@ -144,6 +145,7 @@
 <tr><th>Recipient</th><th>Data</th><th>Purpose</th></tr>
 <tr><td>Google (Google Calendar API, Google Play services)</td><td>Requests for the information in section 1, and sign-in information (only when you connect Google Calendar)</td><td>To read today's events. Google handles it under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
 <tr><td>Unsplash (images.unsplash.com)</td><td>The URL of the chosen photo (photo ID and size). As with any connection, your device's IP address and similar information reach the server</td><td>To download the photo when you choose a photo theme. No account is used and none of your information is sent. Unsplash handles it under the <a href="https://unsplash.com/privacy">Unsplash Privacy Policy</a></td></tr>
+<tr><td>Japan Meteorological Agency (www.jma.go.jp)</td><td>The code of the area you chose. As with any connection, your device's IP address and similar information reach the server</td><td>To read the weather forecast when you turn weather on. No location data or account is used and nothing else is sent</td></tr>
 </table>
 <p>The time, events and alert text are read out with your device's text-to-speech (Android TextToSpeech). Speech is produced by the text-to-speech engine selected on your device, under the policy of the company that provides it.</p>
 
