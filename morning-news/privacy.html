@@ -9,7 +9,7 @@
 <body>
 <p><a href="./">おはようニュースタイマー</a></p>
 <h1>おはようニュースタイマー プライバシーポリシー</h1>
-<p>制定日：2026年11月25日</p>
+<p>制定日：2026年11月25日<br>改定日：2026年11月25日（ネットワークの NAS を探す機能を追加）</p>
 <p>DNGG-studio（以下「運営者」）は、Android アプリ「おはようニュースタイマー」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは、決めた時刻に、利用者が選んだニュースのページ・動画・音声の再生を始めるアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong></p>
 
 <h2>1. 端末の中に保存する情報</h2>
@@ -38,7 +38,8 @@
 <table>
 <tr><th>送信先</th><th>送る情報</th><th>目的</th></tr>
 <tr><td>利用者が選んだ情報源のサイト（日テレNEWS NNN、TBS NEWS DIG、YouTube、利用者が足した URL など）</td><td>ページや動画を開くための要求。ページの中の Cookie、アクセス解析、広告などは、各サイトとその提携先が扱います</td><td>ニュースなどの再生。各サイトでの扱いは、それぞれのプライバシーポリシーに従います（YouTube は <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>）</td></tr>
-<tr><td>利用者が指定した NAS</td><td>ユーザー名・パスワードによる認証と、ファイルを読む要求</td><td>フォルダの最新のファイルの再生</td></tr>
+<tr><td>利用者が指定した NAS</td><td>ユーザー名・パスワードによる認証と、ファイルを読む要求</td><td>共有フォルダの一覧とフォルダの中の表示、最新のファイルの再生</td></tr>
+<tr><td>同じネットワークの機器</td><td>ファイル共有の機器を探す問い合わせ（mDNS）。NAS を選ぶ画面を開いているあいだだけ</td><td>NAS を一覧に出すため。結果は保存せず、外部に送信しません</td></tr>
 </table>
 <p>利用者が足した URL が http:// で始まるときは、通信は暗号化されません。</p>
 
@@ -63,7 +64,7 @@
 <hr>
 <div lang="en">
 <h1>Good Morning News Timer Privacy Policy</h1>
-<p>Effective: November 25, 2026</p>
+<p>Effective: November 25, 2026<br>Updated: November 25, 2026 (added finding NAS devices on the network)</p>
 <p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Good Morning News Timer" ("the app"). The app starts playing news pages, video or audio you choose at the time you set. <strong>We run no servers, and we never collect your information.</strong></p>
 
 <h2>1. Information stored on your device</h2>
@@ -92,7 +93,8 @@
 <table>
 <tr><th>Recipient</th><th>Data</th><th>Purpose</th></tr>
 <tr><td>Sites of the sources you choose (NTV News NNN, TBS NEWS DIG, YouTube, URLs you add, etc.)</td><td>Requests to open pages and video. Cookies, analytics and ads in the pages are handled by each site and its partners</td><td>Playing news and other content, under each site's privacy policy (for YouTube, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</td></tr>
-<tr><td>The NAS you specify</td><td>Sign-in with the user name and password, and requests to read files</td><td>Playing the newest file in the folder</td></tr>
+<tr><td>The NAS you specify</td><td>Sign-in with the user name and password, and requests to read files</td><td>Listing shared folders and their contents, and playing the newest file</td></tr>
+<tr><td>Devices on your local network</td><td>A query for file-sharing devices (mDNS), only while the NAS picker is open</td><td>To list NAS devices. Results are not stored or sent anywhere</td></tr>
 </table>
 <p>If a URL you add starts with http://, the connection is not encrypted.</p>
 
