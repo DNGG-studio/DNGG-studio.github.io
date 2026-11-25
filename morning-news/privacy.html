@@ -9,7 +9,7 @@
 <body>
 <p><a href="./">おはようニュースタイマー</a></p>
 <h1>おはようニュースタイマー プライバシーポリシー</h1>
-<p>制定日：2026年11月25日<br>改定日：2026年11月26日（DLNA サーバーの再生を追加）</p>
+<p>制定日：2026年11月25日<br>改定日：2026年11月26日（DLNA サーバーの再生と、天気の表示を追加）</p>
 <p>DNGG-studio（以下「運営者」）は、Android アプリ「おはようニュースタイマー」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは、決めた時刻に、利用者が選んだニュースのページ・動画・音声の再生を始めるアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong></p>
 
 <h2>1. 端末の中に保存する情報</h2>
@@ -19,6 +19,7 @@
 <li>利用者が足した情報源の名前と URL</li>
 <li>利用者が足した NAS のフォルダの場所・ユーザー名・パスワード（パスワードは、端末の Android Keystore の鍵で暗号化します）</li>
 <li>利用者が足した DLNA サーバーの名前・識別番号・アドレスと、フォルダの場所</li>
+<li>時計と天気の表示の設定（利用者が選んだ天気の場所の名前と緯度・経度、位置と大きさ）と、最後に取得した天気予報</li>
 <li>本アプリの中で開いたページが保存する Cookie などのデータ</li>
 </ul>
 
@@ -32,6 +33,7 @@
 <tr><td>通知（POST_NOTIFICATIONS）</td><td>時刻のお知らせを出すため</td></tr>
 <tr><td>起動時の実行（RECEIVE_BOOT_COMPLETED）</td><td>端末を再起動したあとに、予定を予約し直すため</td></tr>
 </table>
+<p>天気の場所は、利用者が名前で探して選びます。端末の位置情報は使いません。</p>
 <p>位置情報・連絡先・マイク・カメラ・ストレージの権限は使いません。</p>
 
 <h2>3. 外部への通信</h2>
@@ -40,6 +42,8 @@
 <tr><th>送信先</th><th>送る情報</th><th>目的</th></tr>
 <tr><td>利用者が選んだ情報源のサイト（日テレNEWS NNN、TBS NEWS DIG、YouTube、利用者が足した URL など）</td><td>ページや動画を開くための要求。ページの中の Cookie、アクセス解析、広告などは、各サイトとその提携先が扱います</td><td>ニュースなどの再生。各サイトでの扱いは、それぞれのプライバシーポリシーに従います（YouTube は <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>）</td></tr>
 <tr><td>利用者が指定した NAS</td><td>ユーザー名・パスワードによる認証と、ファイルを読む要求</td><td>共有フォルダの一覧とフォルダの中の表示、最新のファイルの再生</td></tr>
+<tr><td><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td>利用者が選んだ場所の緯度・経度（小数 2 桁に丸めたもの）。端末の検索で場所が見つからないときは、入力した場所の名前と言語</td><td>天気予報の取得、場所の検索（天気を使うときだけ）</td></tr>
+<tr><td>端末の地名検索（多くの端末では Google）</td><td>入力した場所の名前と言語</td><td>場所の検索（「探す」を押したときだけ）</td></tr>
 <tr><td>利用者が指定した DLNA サーバー</td><td>フォルダの中を見る要求と、動画・音声を読む要求</td><td>フォルダの中の表示、最新の動画・音声の再生</td></tr>
 <tr><td>同じネットワークの機器</td><td>ファイル共有の機器を探す問い合わせ（mDNS）と、DLNA サーバーを探す問い合わせ（SSDP）。NAS・DLNA サーバーを選ぶ画面を開いているあいだと、保存した DLNA サーバーのアドレスが変わったときだけ</td><td>NAS・DLNA サーバーを見つけるため。結果は保存せず、外部に送信しません</td></tr>
 </table>
@@ -66,7 +70,7 @@
 <hr>
 <div lang="en">
 <h1>Good Morning News Timer Privacy Policy</h1>
-<p>Effective: November 25, 2026<br>Updated: November 26, 2026 (added playback from DLNA servers)</p>
+<p>Effective: November 25, 2026<br>Updated: November 26, 2026 (added playback from DLNA servers and the weather display)</p>
 <p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Good Morning News Timer" ("the app"). The app starts playing news pages, video or audio you choose at the time you set. <strong>We run no servers, and we never collect your information.</strong></p>
 
 <h2>1. Information stored on your device</h2>
@@ -76,6 +80,7 @@
 <li>Names and URLs of sources you add</li>
 <li>Folder location, user name and password of a NAS you add (the password is encrypted with a key in Android Keystore)</li>
 <li>Name, identifier and address of a DLNA server you add, and the folder you choose on it</li>
+<li>Clock and weather settings (name and coordinates of the weather location you choose, position and size) and the last forecast received</li>
 <li>Cookies and similar data saved by pages opened in the app</li>
 </ul>
 
@@ -97,6 +102,8 @@
 <tr><th>Recipient</th><th>Data</th><th>Purpose</th></tr>
 <tr><td>Sites of the sources you choose (NTV News NNN, TBS NEWS DIG, YouTube, URLs you add, etc.)</td><td>Requests to open pages and video. Cookies, analytics and ads in the pages are handled by each site and its partners</td><td>Playing news and other content, under each site's privacy policy (for YouTube, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</td></tr>
 <tr><td>The NAS you specify</td><td>Sign-in with the user name and password, and requests to read files</td><td>Listing shared folders and their contents, and playing the newest file</td></tr>
+<tr><td><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td>Coordinates of the place you chose, rounded to two decimals. If the device's place search finds nothing, the place name you typed and the language</td><td>Weather forecasts and place search (only when you use the weather). The app does not use your device's location</td></tr>
+<tr><td>The device's place search (Google on most devices)</td><td>The place name you typed and the language</td><td>Place search (only when you press Search)</td></tr>
 <tr><td>The DLNA server you specify</td><td>Requests to list folders and to read audio and video</td><td>Listing folders and playing the newest audio or video</td></tr>
 <tr><td>Devices on your local network</td><td>Queries for file-sharing devices (mDNS) and DLNA servers (SSDP), only while a picker is open or when the address of a saved DLNA server has changed</td><td>To find NAS devices and DLNA servers. Results are not stored or sent anywhere</td></tr>
 </table>
