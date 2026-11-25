@@ -9,7 +9,7 @@
 <body>
 <p><a href="./">おはようニュースタイマー</a></p>
 <h1>おはようニュースタイマー プライバシーポリシー</h1>
-<p>制定日：2026年11月25日<br>改定日：2026年11月25日（ネットワークの NAS を探す機能を追加）</p>
+<p>制定日：2026年11月25日<br>改定日：2026年11月26日（DLNA サーバーの再生を追加）</p>
 <p>DNGG-studio（以下「運営者」）は、Android アプリ「おはようニュースタイマー」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは、決めた時刻に、利用者が選んだニュースのページ・動画・音声の再生を始めるアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong></p>
 
 <h2>1. 端末の中に保存する情報</h2>
@@ -18,13 +18,14 @@
 <li>予定（時刻・曜日・情報源と順番・音量・自動で止める時間）と、言語の設定</li>
 <li>利用者が足した情報源の名前と URL</li>
 <li>利用者が足した NAS のフォルダの場所・ユーザー名・パスワード（パスワードは、端末の Android Keystore の鍵で暗号化します）</li>
+<li>利用者が足した DLNA サーバーの名前・識別番号・アドレスと、フォルダの場所</li>
 <li>本アプリの中で開いたページが保存する Cookie などのデータ</li>
 </ul>
 
 <h2>2. 使う権限</h2>
 <table>
 <tr><th>権限</th><th>理由</th></tr>
-<tr><td>インターネット（INTERNET）</td><td>ニュースのページ・動画・音声の再生と、NAS のファイルの読み取りのため</td></tr>
+<tr><td>インターネット（INTERNET）</td><td>ニュースのページ・動画・音声の再生と、NAS・DLNA サーバーのファイルの読み取りのため</td></tr>
 <tr><td>正確なアラーム（USE_EXACT_ALARM、SCHEDULE_EXACT_ALARM）</td><td>決めた時刻ちょうどに再生を始めるため</td></tr>
 <tr><td>全画面の通知（USE_FULL_SCREEN_INTENT）</td><td>画面が消えているとき、時刻に再生の画面を出すため</td></tr>
 <tr><td>ほかのアプリの上に表示（SYSTEM_ALERT_WINDOW）</td><td>ほかのアプリの使用中に、時刻に再生の画面を出すため（任意）</td></tr>
@@ -39,9 +40,10 @@
 <tr><th>送信先</th><th>送る情報</th><th>目的</th></tr>
 <tr><td>利用者が選んだ情報源のサイト（日テレNEWS NNN、TBS NEWS DIG、YouTube、利用者が足した URL など）</td><td>ページや動画を開くための要求。ページの中の Cookie、アクセス解析、広告などは、各サイトとその提携先が扱います</td><td>ニュースなどの再生。各サイトでの扱いは、それぞれのプライバシーポリシーに従います（YouTube は <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>）</td></tr>
 <tr><td>利用者が指定した NAS</td><td>ユーザー名・パスワードによる認証と、ファイルを読む要求</td><td>共有フォルダの一覧とフォルダの中の表示、最新のファイルの再生</td></tr>
-<tr><td>同じネットワークの機器</td><td>ファイル共有の機器を探す問い合わせ（mDNS）。NAS を選ぶ画面を開いているあいだだけ</td><td>NAS を一覧に出すため。結果は保存せず、外部に送信しません</td></tr>
+<tr><td>利用者が指定した DLNA サーバー</td><td>フォルダの中を見る要求と、動画・音声を読む要求</td><td>フォルダの中の表示、最新の動画・音声の再生</td></tr>
+<tr><td>同じネットワークの機器</td><td>ファイル共有の機器を探す問い合わせ（mDNS）と、DLNA サーバーを探す問い合わせ（SSDP）。NAS・DLNA サーバーを選ぶ画面を開いているあいだと、保存した DLNA サーバーのアドレスが変わったときだけ</td><td>NAS・DLNA サーバーを見つけるため。結果は保存せず、外部に送信しません</td></tr>
 </table>
-<p>利用者が足した URL が http:// で始まるときは、通信は暗号化されません。</p>
+<p>利用者が足した URL が http:// で始まるときと、DLNA サーバーとのあいだでは、通信は暗号化されません。</p>
 
 <h2>4. 広告</h2>
 <p>本アプリ自体は広告を表示しません。開いたページの中には、そのサイトの広告が表示されることがあります。本アプリに広告を入れる場合は、このポリシーを改定してお知らせします。</p>
@@ -64,7 +66,7 @@
 <hr>
 <div lang="en">
 <h1>Good Morning News Timer Privacy Policy</h1>
-<p>Effective: November 25, 2026<br>Updated: November 25, 2026 (added finding NAS devices on the network)</p>
+<p>Effective: November 25, 2026<br>Updated: November 26, 2026 (added playback from DLNA servers)</p>
 <p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Good Morning News Timer" ("the app"). The app starts playing news pages, video or audio you choose at the time you set. <strong>We run no servers, and we never collect your information.</strong></p>
 
 <h2>1. Information stored on your device</h2>
@@ -73,13 +75,14 @@
 <li>Schedules (time, days, sources and their order, volume, automatic stop) and the language setting</li>
 <li>Names and URLs of sources you add</li>
 <li>Folder location, user name and password of a NAS you add (the password is encrypted with a key in Android Keystore)</li>
+<li>Name, identifier and address of a DLNA server you add, and the folder you choose on it</li>
 <li>Cookies and similar data saved by pages opened in the app</li>
 </ul>
 
 <h2>2. Permissions</h2>
 <table>
 <tr><th>Permission</th><th>Why</th></tr>
-<tr><td>Internet (INTERNET)</td><td>To play news pages, video and audio, and to read files on your NAS</td></tr>
+<tr><td>Internet (INTERNET)</td><td>To play news pages, video and audio, and to read files on your NAS or DLNA server</td></tr>
 <tr><td>Exact alarms (USE_EXACT_ALARM, SCHEDULE_EXACT_ALARM)</td><td>To start playback exactly on time</td></tr>
 <tr><td>Full-screen notifications (USE_FULL_SCREEN_INTENT)</td><td>To show the player on time while the screen is off</td></tr>
 <tr><td>Display over other apps (SYSTEM_ALERT_WINDOW)</td><td>To show the player on time while you use other apps (optional)</td></tr>
@@ -94,9 +97,10 @@
 <tr><th>Recipient</th><th>Data</th><th>Purpose</th></tr>
 <tr><td>Sites of the sources you choose (NTV News NNN, TBS NEWS DIG, YouTube, URLs you add, etc.)</td><td>Requests to open pages and video. Cookies, analytics and ads in the pages are handled by each site and its partners</td><td>Playing news and other content, under each site's privacy policy (for YouTube, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</td></tr>
 <tr><td>The NAS you specify</td><td>Sign-in with the user name and password, and requests to read files</td><td>Listing shared folders and their contents, and playing the newest file</td></tr>
-<tr><td>Devices on your local network</td><td>A query for file-sharing devices (mDNS), only while the NAS picker is open</td><td>To list NAS devices. Results are not stored or sent anywhere</td></tr>
+<tr><td>The DLNA server you specify</td><td>Requests to list folders and to read audio and video</td><td>Listing folders and playing the newest audio or video</td></tr>
+<tr><td>Devices on your local network</td><td>Queries for file-sharing devices (mDNS) and DLNA servers (SSDP), only while a picker is open or when the address of a saved DLNA server has changed</td><td>To find NAS devices and DLNA servers. Results are not stored or sent anywhere</td></tr>
 </table>
-<p>If a URL you add starts with http://, the connection is not encrypted.</p>
+<p>If a URL you add starts with http://, or the source is a DLNA server, the connection is not encrypted.</p>
 
 <h2>4. Ads</h2>
 <p>The app itself shows no ads. Pages opened in the app may contain the site's own ads. If we add ads to the app, we will update this policy.</p>
