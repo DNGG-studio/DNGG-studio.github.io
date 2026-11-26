@@ -70,6 +70,15 @@
       }
     },
     {
+      id: 'silhouette-slide', category: 'game', icon: true, manual: true,
+      shots: [['1', 'タイトル', 'Title'], ['2', '板を滑らせて影をそろえる', 'Slide boards to match the shadow'], ['3', '影がそろった', 'Shadow complete'], ['4', '面を選ぶ', 'Levels']], enShots: true,
+      name: { ja: '影絵スライド', en: 'Shadow Slide' },
+      desc: {
+        ja: '机の上の板を縦横に滑らせ、壁に映る影を見本の形にそろえるパズル。',
+        en: 'Slide wooden boards so their shadows on the wall match the picture.'
+      }
+    },
+    {
       id: 'kumiki', category: 'game', icon: true, manual: true,
       shots: [['1', 'タイトル画面', 'Title screen'], ['2', 'プレイ画面', 'Gameplay'], ['karakuri', 'からくり屋敷のステージ', 'Karakuri house stage'], ['4', '銀河のステージ', 'Galaxy stage']], enShots: true,
       name: { ja: 'Block KUMIKI', en: 'Block KUMIKI' },

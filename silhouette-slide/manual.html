@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>遊び方 - 影絵スライド</title>
+<meta name="description" content="影絵スライドの遊び方。画面の画像つきで、板の滑らせ方、影のそろえ方、星と手数、面の選び方、記録の送り方を説明します。">
+<link rel="icon" href="images/icon.png">
+<style>
+body{font-family:sans-serif;max-width:760px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}
+h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.4em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.6em}
+img{max-width:100%;height:auto}
+.toc{background:#f5f5f5;border-radius:8px;padding:12px 16px 12px 36px}
+.note{font-size:.9em;color:#555}
+.tip{background:#f1ecff;border-left:4px solid #7a5cc0;padding:8px 12px;margin:12px 0}
+ol li,ul li{margin:.2em 0}
+.figs{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px}
+figure{margin:0;width:250px;max-width:100%}
+figure img{display:block;width:100%;border:1px solid #ddd;border-radius:10px}
+figcaption{font-size:.88em;color:#444;margin-top:6px;line-height:1.55}
+.n{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;border-radius:50%;background:#e53935;color:#fff;font-size:.8em;font-weight:bold;text-align:center;margin-right:2px}
+</style>
+</head>
+<body>
+<p><a href="./">影絵スライド の紹介ページへ戻る</a> ・ <a href="../">DNGG-studio のアプリ一覧</a></p>
+<h1>影絵スライド の遊び方</h1>
+<p>影絵スライドは、机の上の板を滑らせて、灯りに照らされた壁に映る影を、点線の見本とぴったり同じ形にそろえるパズルです。</p>
+<p>画像の<span class="n">1</span>のような赤い番号は、見るところ・押すところと、説明の番号です。</p>
+<p class="note">この説明は バージョン 0.1.0（お試し版）の画面に合わせています（2026年11月26日）。画面はこれから変わることがあります。</p>
+
+<ol class="toc">
+<li><a href="#start">はじめに：タイトルから面を選ぶ</a></li>
+<li><a href="#screen">遊ぶ画面の見方</a></li>
+<li><a href="#slide">板の滑らせ方</a></li>
+<li><a href="#clear">影がそろったら（星と手数）</a></li>
+<li><a href="#undo">1 手戻す・やり直す</a></li>
+<li><a href="#levels">面と章の開き方</a></li>
+<li><a href="#records">記録を見る・友達に送る</a></li>
+<li><a href="#settings">設定</a></li>
+<li><a href="#faq">よくある質問</a></li>
+</ol>
+
+<h2 id="start">1. はじめに：タイトルから面を選ぶ</h2>
+<div class="figs">
+<figure><img src="images/manual/title.jpg" width="540" height="1200" loading="lazy" alt="タイトルの画面"><figcaption><span class="n">1</span>「あそぶ」を押すと、面を選ぶ画面に進みます</figcaption></figure>
+<figure><img src="images/manual/levels.jpg" width="540" height="1200" loading="lazy" alt="面を選ぶ画面"><figcaption><span class="n">1</span>章を選び、<span class="n">2</span>面のタイルを押して、<span class="n">3</span>「○面であそぶ」を押します</figcaption></figure>
+</div>
+<ol>
+<li>タイトルの「あそぶ」を押します</li>
+<li>上の章（にわ・もり・みなと・よぞら）を選びます</li>
+<li>面のタイルを押すと、下にその面の星と手数が出ます。「○面であそぶ」を押すと始まります</li>
+</ol>
+<p>タイルには、その面の見本の影が小さく描いてあります。クリアした面は影が濃くなり、星が付きます。</p>
+
+<h2 id="screen">2. 遊ぶ画面の見方</h2>
+<div class="figs">
+<figure><img src="images/manual/play.jpg" width="540" height="1200" loading="lazy" alt="遊ぶ画面"><figcaption><span class="n">1</span>壁の影と点線の見本、<span class="n">2</span>机の上の板、<span class="n">3</span>手数と星 3 の目安、<span class="n">4</span>重なり</figcaption></figure>
+</div>
+<ul>
+<li><span class="n">1</span><strong>壁</strong>：板の影が映ります。点線が見本の形です。影と点線がぴったり同じになったらクリアです</li>
+<li><span class="n">2</span><strong>机と板</strong>：板には、その板が映す影の形が彫ってあります。板を滑らせると、壁の影も同じ向きに動きます</li>
+<li><span class="n">3</span><strong>手数</strong>：滑らせた回数です。横の「星 3 は ○ 手まで」が、いちばん少ない手数（最短手数）です</li>
+<li><span class="n">4</span><strong>重なり</strong>：影と見本がどれだけ重なっているかの目安です。100% になるとクリアです</li>
+</ul>
+<div class="tip">影は板の真上（壁の同じ位置）に映ります。板を右に 1 ます動かすと、影も右に 1 ます動きます。机の奥（上）にある板ほど、影も壁の上のほうに映ります。</div>
+
+<h2 id="slide">3. 板の滑らせ方</h2>
+<div class="figs">
+<figure><img src="images/manual/slide.jpg" width="540" height="1200" loading="lazy" alt="板を滑らせるところ"><figcaption><span class="n">1</span>板の端の山形の印が、滑らせられる向きです。<span class="n">2</span>最初の面では、金色の矢印と下の文が次の一手を教えてくれます</figcaption></figure>
+<figure><img src="images/manual/slid.jpg" width="540" height="1200" loading="lazy" alt="板を滑らせたあと"><figcaption>板を右へ滑らせると、<span class="n">1</span>壁の影も右へ動き、<span class="n">2</span>手数が 1 増えます</figcaption></figure>
+</div>
+<ol>
+<li>動かしたい板に指を置き、そのまま滑らせたい向きになぞります</li>
+<li>指を離すと、近いますにぴたりと止まります。何ます動かしても 1 手です</li>
+</ol>
+<ul>
+<li><strong>細長い板</strong>は長い向きにだけ、<strong>四角い板</strong>は縦にも横にも滑ります（板の端の山形の印で分かります）</li>
+<li>ほかの板・机の端・金色の釘（4 章）にぶつかると、それ以上は進みません。無理に引っ張ると「コツン」と揺れます</li>
+<li>途中で指を戻して、元のますで離したときは手数に数えません</li>
+</ul>
+
+<h2 id="clear">4. 影がそろったら（星と手数）</h2>
+<div class="figs">
+<figure><img src="images/manual/result.jpg" width="540" height="1200" loading="lazy" alt="影がそろった画面"><figcaption><span class="n">1</span>星と手数、<span class="n">2</span>「次の面へ」、<span class="n">3</span>「友達に送る」</figcaption></figure>
+</div>
+<ul>
+<li>最短手数でそろえると星 3、少し多いと星 2、それより多いと星 1 です。あと何手少なければ星 3 かも出ます</li>
+<li>見本と同じ影になれば、板の並べ方が違ってもクリアです</li>
+<li>ベストを更新すると「ベスト更新！」が出て、記録が保存されます</li>
+<li>「もう一度」で同じ面をはじめから、「面を選ぶ」で面を選ぶ画面に戻ります</li>
+</ul>
+
+<h2 id="undo">5. 1 手戻す・やり直す</h2>
+<ul>
+<li>「1 手戻す」：最後に滑らせた板を元に戻します。手数も 1 減ります</li>
+<li>「やり直す」：その面をはじめの並べ方に戻します。手数は 0 になります</li>
+</ul>
+
+<h2 id="levels">6. 面と章の開き方</h2>
+<ul>
+<li>1 つの章に 10 面あります。前の面をクリアすると、次の面が開きます</li>
+<li>章は、集めた星の数で開きます（もり 12 個、みなと 33 個、よぞら 57 個）。面を選ぶ画面の上のメーターが、集めた星の数です</li>
+<li>よぞらの章には、動かない金色の釘があります</li>
+</ul>
+
+<h2 id="records">7. 記録を見る・友達に送る</h2>
+<div class="figs">
+<figure><img src="images/manual/records.jpg" width="540" height="1200" loading="lazy" alt="記録の画面"><figcaption><span class="n">1</span>下の「記録」で開きます。<span class="n">2</span>「友達に送る」で画像と記録の文を送れます</figcaption></figure>
+</div>
+<ul>
+<li>面ごとに、いちばん少ない手数の記録（星・手数・プレイ時間・日付）と、そろったときの盤面の画像が残ります</li>
+<li>「友達に送る」を押すと、端末の共有メニューが出ます。LINE やメールなど、送りたいアプリを選びます</li>
+<li>プレイ時間は、遊ぶ画面を開いていた時間だけを数えます</li>
+</ul>
+
+<h2 id="settings">8. 設定</h2>
+<div class="figs">
+<figure><img src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面"><figcaption><span class="n">1</span>音楽・効果音・振動の切り替え、<span class="n">2</span>このページとプライバシーポリシー</figcaption></figure>
+</div>
+<ul>
+<li>音楽・効果音・振動を、それぞれ入れたり切ったりできます</li>
+<li>端末を暗い画面（ダークテーマ）にすると、夜の部屋の絵になります</li>
+</ul>
+
+<h2 id="faq">9. よくある質問</h2>
+<h3>どうしても解けません</h3>
+<p>見本の点線の中で、どの板の影がどこに入るかを先に考えてみてください。板に彫ってある形が手がかりです。途中で行き詰まったら「やり直す」で、はじめから考え直せます。</p>
+<h3>記録はどこに保存されますか</h3>
+<p>端末の中だけに保存します。外へは送りません。アプリを削除すると消えます。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+<h3>広告やお金はかかりますか</h3>
+<p>お試し版には広告も課金もありません。インターネットにもつながりません。</p>
+
+<h2>お問い合わせ</h2>
+<p><a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
+<p class="note">絵・音楽・効果音はすべて、このアプリのために作ったものです。</p>
+
+<section class="dngg-apps" data-mode="others" data-current="silhouette-slide" data-lang="ja">
+<p><a href="../">DNGG-studio のアプリ一覧</a></p>
+</section>
+<script src="../apps.js" defer></script>
+</body>
+</html>
