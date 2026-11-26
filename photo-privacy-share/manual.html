@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使い方 - 位置情報消し共有（Photo Privacy Share）</title>
+<meta name="description" content="位置情報消し共有（Photo Privacy Share）の使い方。写真を選ぶ、入っている情報を見る、消して共有・保存する、ほかのアプリの共有から開く。">
+<link rel="icon" href="images/icon.png">
+<style>
+body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}
+h1{font-size:1.4em}
+h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}
+h3{font-size:1em;margin-top:1.5em}
+img{max-width:100%;height:auto}
+.toc{background:#f0f7f6;border-radius:8px;padding:12px 16px 12px 36px}
+.note{font-size:.9em;color:#555}
+.tip{background:#e9f6f4;border-left:4px solid #0f7a78;padding:8px 12px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:.95em}
+th,td{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#eef6f5}
+ol li,ul li{margin:.2em 0}
+.figs{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px}
+figure{margin:0;width:250px;max-width:100%}
+figure img{display:block;width:100%;border:1px solid #ddd;border-radius:10px}
+figcaption{font-size:.88em;color:#444;margin-top:6px;line-height:1.55}
+.n{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;border-radius:50%;background:#e53935;color:#fff;font-size:.8em;font-weight:bold;text-align:center;margin-right:2px}
+</style>
+</head>
+<body>
+<p><a href="./">位置情報消し共有 の紹介ページへ戻る</a> ・ <a href="../">DNGG-studio のアプリ一覧</a></p>
+<h1>位置情報消し共有 の使い方</h1>
+<p>位置情報消し共有（Photo Privacy Share）は、写真に入っている撮影地・日時・機種などの情報を見せ、消した写しを作って共有するアプリです。元の写真は変わりません。</p>
+<p>画像の<span class="n">1</span>のような赤い番号は、押すところと、説明の番号です。</p>
+<p class="note">この説明は バージョン 0.1.0（お試し版）の画面に合わせています（2026年11月26日）。画面はこれから変わることがあります。画像の写真はすべて見本です。</p>
+
+<ol class="toc">
+<li><a href="#start">はじめに</a></li>
+<li><a href="#pick">写真を選ぶ</a></li>
+<li><a href="#batch">まとめて処理（複数枚のとき）</a></li>
+<li><a href="#inspect">入っている情報を見る</a></li>
+<li><a href="#share">消して共有する・保存する</a></li>
+<li><a href="#from-other">ほかのアプリの「共有」から開く</a></li>
+<li><a href="#menu">メニュー</a></li>
+<li><a href="#faq">よくある質問</a></li>
+</ol>
+
+<h2 id="start">1. はじめに</h2>
+<p>インストールしたら、そのまま使えます。アカウントの登録や、写真・位置情報の権限の許可は要りません。インターネットにもつながりません。</p>
+
+<h2 id="pick">2. 写真を選ぶ</h2>
+<div class="figs">
+<figure><img src="images/manual/pick-1.jpg" width="540" height="1200" loading="lazy" alt="はじめの画面。下に「写真を選ぶ」のボタン"><figcaption><span class="n">1</span>「写真を選ぶ」を押します</figcaption></figure>
+<figure><img src="images/manual/pick-2.jpg" width="540" height="1200" loading="lazy" alt="Android の写真選択の画面"><figcaption><span class="n">1</span>写真を押して選び（何枚でも）、<span class="n">2</span>「完了」（Done）を押します</figcaption></figure>
+</div>
+<ul>
+<li>写真の選択は Android の画面です。アプリが見られるのは、ここで選んだ写真だけです</li>
+<li>一度に 30 枚まで選べます</li>
+<li>1 枚だけ選ぶと<a href="#inspect">情報の確認</a>、2 枚以上なら<a href="#batch">まとめて処理</a>の画面が開きます</li>
+</ul>
+
+<h2 id="batch">3. まとめて処理（複数枚のとき）</h2>
+<div class="figs">
+<figure><img src="images/manual/batch.jpg" width="540" height="1200" loading="lazy" alt="まとめて処理の画面"><figcaption><span class="n">1</span>写真を押すと、入っている情報を見られます。<span class="n">2</span>「○ 枚まとめて消す」で全部の写しを作ります</figcaption></figure>
+</div>
+<ul>
+<li>上に「6 枚のうち 3 枚に位置情報があります」のように、位置情報のある枚数が出ます</li>
+<li>位置情報のある写真には赤い「位置あり」の札、ない写真には「なし」の札が付きます</li>
+</ul>
+
+<h2 id="inspect">4. 入っている情報を見る</h2>
+<div class="figs">
+<figure><img src="images/manual/inspect.jpg" width="540" height="1200" loading="lazy" alt="情報の確認の画面"><figcaption><span class="n">1</span>入っている情報が危ない順に並びます。<span class="n">2</span>「消して共有する」で写しを作ります</figcaption></figure>
+</div>
+<table>
+<tr><th>項目</th><th>中身</th><th>色</th></tr>
+<tr><td>位置</td><td>撮った場所（緯度・経度）。自宅で撮った写真なら自宅の場所が分かります</td><td>赤</td></tr>
+<tr><td>持ち主・番号</td><td>持ち主の名前、カメラの製造番号、コメントなど</td><td>赤</td></tr>
+<tr><td>日時</td><td>撮った日時</td><td>だいだい</td></tr>
+<tr><td>機種</td><td>スマホやカメラの機種名</td><td>だいだい</td></tr>
+<tr><td>撮影の設定</td><td>露出・ISO・レンズなど</td><td>灰色</td></tr>
+<tr><td>その他の書き込み</td><td>編集アプリの名前、XMP、PNG の文字の情報など</td><td>灰色</td></tr>
+</table>
+<p>写真の上の札は「撮影地が入っています」か「撮影地は入っていません」です。何も見つからないときも、念のため写しを作れます。</p>
+
+<h2 id="share">5. 消して共有する・保存する</h2>
+<div class="figs">
+<figure><img src="images/manual/result.jpg" width="540" height="1200" loading="lazy" alt="消したあとの画面"><figcaption>消した項目に順にチェックが付きます。<span class="n">1</span>「共有する」<span class="n">2</span>「端末に保存」</figcaption></figure>
+<figure><img src="images/manual/share-sheet.jpg" width="540" height="1200" loading="lazy" alt="Android の共有の画面"><figcaption>「共有する」を押すと、送り先のアプリ（LINE・メール・ドライブなど）を選ぶ画面が出ます</figcaption></figure>
+</div>
+<ul>
+<li>「写しの大きさ」に、作った写しの大きさが出ます。JPEG・PNG・WebP は「画質はそのまま」、HEIC などは JPEG に変えるので「画質はほぼそのまま」です</li>
+<li>「写しに位置・日時・機種の情報が残っていないことを確かめました」と出れば、消したあとに読み直して確かめ済みです</li>
+<li>「端末に保存」を押すと、写真のアプリの「Pictures/PhotoPrivacy」に保存されます</li>
+<li>写真の向き（縦・横）だけは残すので、写しが横倒しになることはありません</li>
+<li>「ほかの写真を消す」で、写真を選び直せます</li>
+</ul>
+
+<h2 id="from-other">6. ほかのアプリの「共有」から開く</h2>
+<div class="figs">
+<figure><img src="images/manual/received.jpg" width="540" height="1200" loading="lazy" alt="ほかのアプリから受け取ったときの画面"><figcaption>写真のアプリなどで「共有」→「位置情報消し共有」を選ぶと、<span class="n">1</span>「ほかのアプリから受け取りました」と出て、同じ画面が開きます</figcaption></figure>
+</div>
+<p>写真のアプリで写真を見ているときに、そのまま情報を消して送れます。複数枚まとめて共有しても受け取れます。</p>
+
+<h2 id="menu">7. メニュー</h2>
+<div class="figs">
+<figure><img src="images/manual/menu.jpg" width="540" height="1200" loading="lazy" alt="右上のメニュー"><figcaption><span class="n">1</span>右上の「︙」を押すと、<span class="n">2</span>「プライバシーポリシー」を開けます。写真を選んだあとは「写真を選び直す」も出ます</figcaption></figure>
+</div>
+
+<h2 id="faq">8. よくある質問</h2>
+<h3>元の写真から情報が消えますか？</h3>
+<p>いいえ。元の写真には書き込みません。情報を消した「写し」を別に作ります。</p>
+<h3>写しはどこに残りますか？</h3>
+<p>共有のための写しは、アプリの中の一時的な場所に置き、作ってから 30 分たつと、次にアプリを開いたとき・写真を選んだときに消します。残したいときは「端末に保存」を押してください（Pictures/PhotoPrivacy）。</p>
+<h3>写真が外に送られることはありますか？</h3>
+<p>ありません。アプリはインターネットにつながらず、処理はすべてスマホの中で行います。送るのは、利用者が「共有する」で選んだアプリにだけです。</p>
+<h3>位置が「あり」なのに座標が出ません</h3>
+<p>Android の写真選択は、アプリに渡す写真の位置を伏せることがあります。そのときは位置の情報が入っていることだけを出します。写しからは消えています。</p>
+<h3>データの扱いを詳しく知りたい</h3>
+<p><a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<h2>お問い合わせ</h2>
+<p>DNGG-studio：<a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
+<p><a href="./">紹介ページへ戻る</a></p>
+
+<section class="dngg-apps" data-mode="others" data-current="photo-privacy-share" data-lang="ja">
+<p><a href="../">DNGG-studio のアプリ一覧</a></p>
+</section>
+<script src="../apps.js" defer></script>
+</body>
+</html>
