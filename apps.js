@@ -52,6 +52,15 @@
       }
     },
     {
+      id: 'photo-privacy-share', category: 'tool', icon: true, manual: true,
+      shots: [['1', 'はじめの画面', 'Home'], ['2', '位置情報のある写真に赤い札', 'Red badges on photos with location'], ['3', '入っている情報を危ない順に', 'Hidden info, most sensitive first'], ['4', '消した項目にチェック', 'Checks for removed info']], enShots: true,
+      name: { ja: '位置情報消し共有', en: 'Photo Privacy Share' },
+      desc: {
+        ja: '写真の撮影地・日時・機種を確かめて、消した写しをそのまま共有。写真の権限なし。',
+        en: 'See the location, date and device hidden in photos, and share clean copies.'
+      }
+    },
+    {
       id: 'tabi-log', category: 'tool', icon: true, manual: true,
       shots: [['1', '経路と写真の地図', 'Route and photos on a map'], ['2', '旅のスライドショー', 'Trip slideshow'], ['3', 'その日の移動の全体', 'The day at a glance'], ['4', '立ち寄りと滞在時間', 'Stops and length of stay']], enShots: true,
       name: { ja: 'たびログ', en: 'TabiLog' },
