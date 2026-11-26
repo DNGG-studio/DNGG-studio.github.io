@@ -25,7 +25,7 @@
       }
     },
     {
-      id: 'talking-clock', category: 'tool', icon: false, manual: true,
+      id: 'talking-clock', category: 'tool', icon: true, manual: true,
       shots: [['1', 'コーギーの写真の着せ替え', 'Corgi photo theme'], ['2', 'スイーツの写真の着せ替え', 'Sweets photo theme'], ['3', '着せ替えのカテゴリー', 'Theme categories'], ['4', '設定の画面', 'Settings']], enShots: false,
       name: { ja: 'しゃべる時計', en: 'Talking Clock' },
       desc: {
