@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>使い方 - おはようニュースタイマー（Good Morning News Timer）</title>
 <meta name="description" content="おはようニュースタイマーの使い方。予定の作り方、情報源、URL・NAS・DLNA の追加、自動再生の許可。">
-<style>body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.5em}img{max-width:100%;height:auto}.shot{display:block;max-width:240px;border-radius:8px;margin:12px 0;border:1px solid #ddd}.shots{display:flex;flex-wrap:wrap;gap:12px}.toc{background:#f3f5f9;border-radius:8px;padding:12px 16px 12px 36px}.note{font-size:.9em;color:#555}.tip{background:#eef3fb;border-left:4px solid #3d6bd9;padding:8px 12px;margin:12px 0}ol li,ul li{margin:.2em 0}code{word-break:break-all}</style>
+<style>body{font-family:sans-serif;max-width:720px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.2em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.5em}img{max-width:100%;height:auto}.shot{display:block;max-width:240px;border-radius:8px;margin:12px 0;border:1px solid #ddd}.shot.wide{max-width:100%}.shots{display:flex;flex-wrap:wrap;gap:12px}.toc{background:#f3f5f9;border-radius:8px;padding:12px 16px 12px 36px}.note{font-size:.9em;color:#555}.tip{background:#eef3fb;border-left:4px solid #3d6bd9;padding:8px 12px;margin:12px 0}ol li,ul li{margin:.2em 0}code{word-break:break-all}</style>
 </head>
 <body>
 <p><a href="./">おはようニュースタイマー の紹介ページへ戻る</a></p>
 <h1>おはようニュースタイマー の使い方</h1>
 <p>おはようニュースタイマー（Good Morning News Timer）は、決めた時刻にニュースの再生を自動で始めるアプリです。</p>
-<p class="note">この説明は バージョン 1.1.0 の画面に合わせています（2026年11月27日。再生を止めたあとの画面と広告を追加。1.0.0 にはありません）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
+<p class="note">この説明は バージョン 1.1.0 の画面に合わせています（2026年11月27日。再生を止めたあとの画面と広告を追加。1.0.0 にはありません。標準の再生速度・ダークモード・横向きのボタンは、次の版 1.2.0 から）。画面はこれから変わることがあります。画像の赤い枠と番号は、説明の番号と同じところです。</p>
 
 <ol class="toc">
 <li><a href="#start">はじめに（許可）</a></li>
@@ -82,7 +82,18 @@
 <ul>
 <li>45 秒ほど待っても音が出ないときは、自動で次の情報源に進みます</li>
 <li>予定の情報源がどれも再生できないときは、代わりにアラームを鳴らします。停止のボタンで止まります</li>
+<li>再生の速さは、設定の「標準の再生速度」で変えられます（<a href="#settings">10.</a>）</li>
 </ul>
+
+<h3>横向きのとき</h3>
+<p>横向きでは、下の帯と題名を出さず、ボタンだけを映像に重ねます。</p>
+<img class="shot wide" src="images/manual/player-wide.jpg" width="1080" height="486" loading="lazy" alt="横向きの再生の画面">
+<ol>
+<li><strong>矢印が 4 つのボタン</strong>：時計・天気・ボタンの位置と大きさを変えます（<a href="#display">9.</a>）</li>
+<li><strong>次の情報源</strong>のボタン</li>
+<li><strong>停止</strong>のボタン</li>
+</ol>
+<p>ボタンが映像のじゃまになるときは、1. のボタンを押して、好きな場所に動かせます。</p>
 
 <h3>止めたあとの画面</h3>
 <img class="shot" src="images/manual/stopped.jpg" width="540" height="1200" loading="lazy" alt="再生を止めたあとの画面">
@@ -202,19 +213,39 @@
 </ol>
 <ul>
 <li>位置と大きさは、縦向きと横向きで別々に覚えます。画面からはみ出す大きさにはなりません</li>
+<li>横向きのときは、停止などの<strong>ボタン</strong>も動かせます（下の画像）</li>
 <li>天気の数字は、赤が最高気温、青が最低気温（℃）、傘が降水確率です。再生の画面を出しているあいだ、30 分ごとに新しくします</li>
 <li>時計や天気の上を触っても、後ろのページを操作できます</li>
 <li>天気予報は、日本の場所は<a href="https://www.jma.go.jp/">気象庁ホームページ</a>（加工して作成）、それ以外は <a href="https://api.met.no/">MET Norway</a>（CC BY 4.0）のデータです（バージョン 1.1.0 から。1.0.0 は Open-Meteo.com）</li>
 </ul>
 
+<h3>横向きでボタンを動かす</h3>
+<p>横向きの再生の画面で、矢印が 4 つのボタンを押します。</p>
+<img class="shot wide" src="images/manual/layout-wide.jpg" width="1080" height="486" loading="lazy" alt="横向きでボタンを動かしているところ">
+<ol>
+<li><strong>「ボタン」</strong>：ボタンの大きさを変えるときに選びます（「時計」「天気」も同じです）</li>
+<li><strong>丸い矢印</strong>：横向きの位置と大きさを、最初に戻します</li>
+<li>ボタンのまとまりを指で動かします（並べ替えの間は、押しても止まったり次に進んだりしません）</li>
+<li>つまみを左右に動かして、大きさを変えます</li>
+<li><strong>チェック</strong>：終わります</li>
+</ol>
+
 <h2 id="settings">10. 設定</h2>
 <img class="shot" src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面">
 <ol>
+<li><strong>「標準の再生速度」</strong>：再生の速さを 0.75×〜2× から選びます（下の画像）。最初は 1× です</li>
 <li><strong>「時計と天気」</strong>：<a href="#display">9.</a> へ</li>
+<li><strong>「ダークモード」</strong>：ON にすると、画面が暗い色になります。最初は OFF（明るい色）です。再生の画面は、いつも暗い色です</li>
 <li><strong>「言語」</strong>：12 言語から選べます。「自動」なら端末の言語です</li>
 <li><strong>「プライバシーポリシー」</strong>：このサイトのページを開きます</li>
 <li>広告が出ます</li>
 </ol>
+<img class="shot" src="images/manual/speed.jpg" width="540" height="1200" loading="lazy" alt="標準の再生速度を選ぶところ">
+<ul>
+<li>速さは、動画・音声のファイル、NAS、DLNA、YouTube で変わります。声の高さは変わりません</li>
+<li>ニュースのページでは、ページの作りによって変わらないことがあります</li>
+<li>ライブ配信（生放送）は、いつも 1× です</li>
+</ul>
 <p>同意が必要な地域では、「広告のプライバシー設定」の行も出ます。広告の同意を変えられます。</p>
 
 <h2 id="faq">11. よくある質問</h2>
