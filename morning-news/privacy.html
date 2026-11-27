@@ -9,7 +9,7 @@
 <body>
 <p><a href="./">おはようニュースタイマー</a></p>
 <h1>おはようニュースタイマー プライバシーポリシー</h1>
-<p>制定日：2026年11月25日<br>改定日：2026年11月27日（バージョン 1.1.0 からの広告を追加）</p>
+<p>制定日：2026年11月25日<br>改定日：2026年11月27日（バージョン 1.1.0 からの広告と、天気のデータ元の変更）</p>
 <p>DNGG-studio（以下「運営者」）は、Android アプリ「おはようニュースタイマー」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは、決めた時刻に、利用者が選んだニュースのページ・動画・音声の再生を始めるアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong>広告（バージョン 1.1.0 から）による情報の扱いは 4. のとおりです。</p>
 
 <h2>1. 端末の中に保存する情報</h2>
@@ -43,12 +43,15 @@
 <tr><th>送信先</th><th>送る情報</th><th>目的</th></tr>
 <tr><td>利用者が選んだ情報源のサイト（日テレNEWS NNN、TBS NEWS DIG、YouTube、利用者が足した URL など）</td><td>ページや動画を開くための要求。ページの中の Cookie、アクセス解析、広告などは、各サイトとその提携先が扱います</td><td>ニュースなどの再生。各サイトでの扱いは、それぞれのプライバシーポリシーに従います（YouTube は <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>）</td></tr>
 <tr><td>利用者が指定した NAS</td><td>ユーザー名・パスワードによる認証と、ファイルを読む要求</td><td>共有フォルダの一覧とフォルダの中の表示、最新のファイルの再生</td></tr>
-<tr><td><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td>利用者が選んだ場所の緯度・経度（小数 2 桁に丸めたもの）。端末の検索で場所が見つからないときは、入力した場所の名前と言語</td><td>天気予報の取得、場所の検索（天気を使うときだけ）</td></tr>
+<tr><td><a href="https://www.jma.go.jp/">気象庁</a></td><td>日本の場所のとき、その地域の予報のデータを取る要求（場所の緯度・経度は送りません）</td><td>天気予報の取得（天気を使うときだけ）</td></tr>
+<tr><td><a href="https://api.met.no/doc/TermsOfService">MET Norway</a>（ノルウェー気象研究所）</td><td>日本以外の場所のとき、利用者が選んだ場所の緯度・経度（小数 2 桁に丸めたもの）と、本アプリの名前</td><td>天気予報の取得（天気を使うときだけ）</td></tr>
+<tr><td><a href="https://photon.komoot.io/">Photon</a>（komoot）</td><td>端末の検索で場所が見つからないとき、入力した場所の名前と言語</td><td>場所の検索（「探す」を押したときだけ）</td></tr>
 <tr><td>端末の地名検索（多くの端末では Google）</td><td>入力した場所の名前と言語</td><td>場所の検索（「探す」を押したときだけ）</td></tr>
 <tr><td>利用者が指定した DLNA サーバー</td><td>フォルダの中を見る要求と、動画・音声を読む要求</td><td>フォルダの中の表示、最新の動画・音声の再生</td></tr>
 <tr><td>同じネットワークの機器</td><td>ファイル共有の機器を探す問い合わせ（mDNS）と、DLNA サーバーを探す問い合わせ（SSDP）。NAS・DLNA サーバーを選ぶ画面を開いているあいだと、保存した DLNA サーバーのアドレスが変わったときだけ</td><td>NAS・DLNA サーバーを見つけるため。結果は保存せず、外部に送信しません</td></tr>
 </table>
 <p>利用者が足した URL が http:// で始まるときと、DLNA サーバーとのあいだでは、通信は暗号化されません。</p>
+<p>天気の気象庁・MET Norway・Photon はバージョン 1.1.0 からです。バージョン 1.0.0 は、天気予報と場所の検索（端末の検索で見つからないとき）に <a href="https://open-meteo.com/en/terms">Open-Meteo</a> を使い、場所の緯度・経度（小数 2 桁）と、入力した場所の名前と言語を送ります。</p>
 
 <h2>4. 広告</h2>
 <p>本アプリはバージョン 1.1.0 から、広告の表示に Google AdMob を使用します。広告を表示するのは、再生を自分で止めたあとの画面と、設定の画面だけです。再生中やロック画面の上には表示しません（バージョン 1.0.0 は広告を表示しません）。</p>
@@ -74,7 +77,7 @@
 <hr>
 <div lang="en">
 <h1>Good Morning News Timer Privacy Policy</h1>
-<p>Effective: November 25, 2026<br>Updated: November 27, 2026 (added ads from version 1.1.0)</p>
+<p>Effective: November 25, 2026<br>Updated: November 27, 2026 (ads and new weather data sources from version 1.1.0)</p>
 <p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Good Morning News Timer" ("the app"). The app starts playing news pages, video or audio you choose at the time you set. <strong>We run no servers, and we never collect your information.</strong> For ads (from version 1.1.0), see section 4.</p>
 
 <h2>1. Information stored on your device</h2>
@@ -107,12 +110,15 @@
 <tr><th>Recipient</th><th>Data</th><th>Purpose</th></tr>
 <tr><td>Sites of the sources you choose (NTV News NNN, TBS NEWS DIG, YouTube, URLs you add, etc.)</td><td>Requests to open pages and video. Cookies, analytics and ads in the pages are handled by each site and its partners</td><td>Playing news and other content, under each site's privacy policy (for YouTube, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</td></tr>
 <tr><td>The NAS you specify</td><td>Sign-in with the user name and password, and requests to read files</td><td>Listing shared folders and their contents, and playing the newest file</td></tr>
-<tr><td><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td>Coordinates of the place you chose, rounded to two decimals. If the device's place search finds nothing, the place name you typed and the language</td><td>Weather forecasts and place search (only when you use the weather). The app does not use your device's location</td></tr>
+<tr><td><a href="https://www.jma.go.jp/">Japan Meteorological Agency</a></td><td>For places in Japan, a request for that region's forecast file (the coordinates are not sent)</td><td>Weather forecasts (only when you use the weather). The app does not use your device's location</td></tr>
+<tr><td><a href="https://api.met.no/doc/TermsOfService">MET Norway</a> (Norwegian Meteorological Institute)</td><td>For places outside Japan, the coordinates of the place you chose, rounded to two decimals, and the app's name</td><td>Weather forecasts (only when you use the weather)</td></tr>
+<tr><td><a href="https://photon.komoot.io/">Photon</a> (komoot)</td><td>If the device's place search finds nothing, the place name you typed and the language</td><td>Place search (only when you press Search)</td></tr>
 <tr><td>The device's place search (Google on most devices)</td><td>The place name you typed and the language</td><td>Place search (only when you press Search)</td></tr>
 <tr><td>The DLNA server you specify</td><td>Requests to list folders and to read audio and video</td><td>Listing folders and playing the newest audio or video</td></tr>
 <tr><td>Devices on your local network</td><td>Queries for file-sharing devices (mDNS) and DLNA servers (SSDP), only while a picker is open or when the address of a saved DLNA server has changed</td><td>To find NAS devices and DLNA servers. Results are not stored or sent anywhere</td></tr>
 </table>
 <p>If a URL you add starts with http://, or the source is a DLNA server, the connection is not encrypted.</p>
+<p>The Japan Meteorological Agency, MET Norway and Photon are used from version 1.1.0. Version 1.0.0 uses <a href="https://open-meteo.com/en/terms">Open-Meteo</a> for weather forecasts and place search (when the device's search finds nothing), sending the coordinates of the place (rounded to two decimals) and the place name you typed with the language.</p>
 
 <h2>4. Ads</h2>
 <p>From version 1.1.0, the app uses Google AdMob to show ads. Ads appear only on the screen shown after you stop playback yourself, and on the settings screen. They never appear during playback or over the lock screen (version 1.0.0 shows no ads).</p>
