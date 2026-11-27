@@ -9,8 +9,8 @@
 <body>
 <p><a href="./">おはようニュースタイマー</a></p>
 <h1>おはようニュースタイマー プライバシーポリシー</h1>
-<p>制定日：2026年11月25日<br>改定日：2026年11月26日（DLNA サーバーの再生と、天気の表示を追加）</p>
-<p>DNGG-studio（以下「運営者」）は、Android アプリ「おはようニュースタイマー」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは、決めた時刻に、利用者が選んだニュースのページ・動画・音声の再生を始めるアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong></p>
+<p>制定日：2026年11月25日<br>改定日：2026年11月27日（バージョン 1.1.0 からの広告を追加）</p>
+<p>DNGG-studio（以下「運営者」）は、Android アプリ「おはようニュースタイマー」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。本アプリは、決めた時刻に、利用者が選んだニュースのページ・動画・音声の再生を始めるアプリです。<strong>運営者はサーバーを持たず、利用者の情報を運営者のもとに集めることはありません。</strong>広告（バージョン 1.1.0 から）による情報の扱いは 4. のとおりです。</p>
 
 <h2>1. 端末の中に保存する情報</h2>
 <p>次の情報を利用者の端末の中だけに保存します。端末のバックアップの対象にはせず、本アプリを削除すると消えます。</p>
@@ -32,6 +32,7 @@
 <tr><td>ほかのアプリの上に表示（SYSTEM_ALERT_WINDOW）</td><td>ほかのアプリの使用中に、時刻に再生の画面を出すため（任意）</td></tr>
 <tr><td>通知（POST_NOTIFICATIONS）</td><td>時刻のお知らせを出すため</td></tr>
 <tr><td>起動時の実行（RECEIVE_BOOT_COMPLETED）</td><td>端末を再起動したあとに、予定を予約し直すため</td></tr>
+<tr><td>広告 ID（AD_ID）、ネットワークの状態など</td><td>広告の SDK が使う（バージョン 1.1.0 から）</td></tr>
 </table>
 <p>天気の場所は、利用者が名前で探して選びます。端末の位置情報は使いません。</p>
 <p>位置情報・連絡先・マイク・カメラ・ストレージの権限は使いません。</p>
@@ -50,10 +51,13 @@
 <p>利用者が足した URL が http:// で始まるときと、DLNA サーバーとのあいだでは、通信は暗号化されません。</p>
 
 <h2>4. 広告</h2>
-<p>本アプリ自体は広告を表示しません。開いたページの中には、そのサイトの広告が表示されることがあります。本アプリに広告を入れる場合は、このポリシーを改定してお知らせします。</p>
+<p>本アプリはバージョン 1.1.0 から、広告の表示に Google AdMob を使用します。広告を表示するのは、再生を自分で止めたあとの画面と、設定の画面だけです。再生中やロック画面の上には表示しません（バージョン 1.0.0 は広告を表示しません）。</p>
+<p>AdMob は、広告 ID などの端末識別子、IP アドレス（おおよその地域が推定されることがあります）、広告の表示や操作の情報などを、広告の配信、測定、不正防止のために収集する場合があります。予定・情報源・NAS や DLNA サーバーの情報・天気の場所は広告に渡しません。広告の SDK による位置情報の収集も切ってあります。Google による情報の扱いは、<a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>をご覧ください。</p>
+<p>同意が必要な地域では、起動時に確認画面を表示します。同意の内容は、設定画面の「広告のプライバシー設定」から変更できます。広告 ID は、端末の設定から削除できる場合があります。</p>
+<p>開いたページの中には、そのサイトの広告が表示されることがあります。これは本アプリの広告ではなく、各サイトが扱います。</p>
 
 <h2>5. 第三者への提供</h2>
-<p>運営者が利用者の情報を第三者に提供することはありません（法令に基づく場合を除きます）。運営者は利用者の情報を受け取っていないため、提供することもできません。</p>
+<p>運営者が利用者の情報を第三者に提供することはありません（法令に基づく場合を除きます）。運営者は利用者の情報を受け取っていないため、提供することもできません。広告の SDK が直接集める情報は、4. のとおりです。</p>
 
 <h2>6. 情報の削除</h2>
 <ul>
@@ -70,8 +74,8 @@
 <hr>
 <div lang="en">
 <h1>Good Morning News Timer Privacy Policy</h1>
-<p>Effective: November 25, 2026<br>Updated: November 26, 2026 (added playback from DLNA servers and the weather display)</p>
-<p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Good Morning News Timer" ("the app"). The app starts playing news pages, video or audio you choose at the time you set. <strong>We run no servers, and we never collect your information.</strong></p>
+<p>Effective: November 25, 2026<br>Updated: November 27, 2026 (added ads from version 1.1.0)</p>
+<p>This policy explains how DNGG-studio ("we") handles your information in the Android app "Good Morning News Timer" ("the app"). The app starts playing news pages, video or audio you choose at the time you set. <strong>We run no servers, and we never collect your information.</strong> For ads (from version 1.1.0), see section 4.</p>
 
 <h2>1. Information stored on your device</h2>
 <p>The following is stored only on your device. It is excluded from device backup and is deleted when you uninstall the app.</p>
@@ -93,6 +97,7 @@
 <tr><td>Display over other apps (SYSTEM_ALERT_WINDOW)</td><td>To show the player on time while you use other apps (optional)</td></tr>
 <tr><td>Notifications (POST_NOTIFICATIONS)</td><td>To notify you at the set time</td></tr>
 <tr><td>Run at startup (RECEIVE_BOOT_COMPLETED)</td><td>To schedule playback again after the device restarts</td></tr>
+<tr><td>Advertising ID (AD_ID), network state, etc.</td><td>Used by the ads SDK (from version 1.1.0)</td></tr>
 </table>
 <p>The app does not use location, contacts, microphone, camera or storage permissions.</p>
 
@@ -110,10 +115,13 @@
 <p>If a URL you add starts with http://, or the source is a DLNA server, the connection is not encrypted.</p>
 
 <h2>4. Ads</h2>
-<p>The app itself shows no ads. Pages opened in the app may contain the site's own ads. If we add ads to the app, we will update this policy.</p>
+<p>From version 1.1.0, the app uses Google AdMob to show ads. Ads appear only on the screen shown after you stop playback yourself, and on the settings screen. They never appear during playback or over the lock screen (version 1.0.0 shows no ads).</p>
+<p>AdMob may collect device identifiers such as the advertising ID, your IP address (which may be used to estimate your general area), and information about how ads are shown and used, for ad delivery, measurement and fraud prevention. Your schedules, sources, NAS or DLNA server details and weather place are not passed to ads, and location collection by the ads SDK is turned off. See <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a> for how Google uses this information.</p>
+<p>Where consent is required, the app asks for it at startup. You can change your choice under "Ad privacy settings" in the settings screen. You may be able to delete the advertising ID in your device settings.</p>
+<p>Pages opened in the app may contain the site's own ads. These are not the app's ads and are handled by each site.</p>
 
 <h2>5. Sharing with third parties</h2>
-<p>We do not provide your information to third parties, except where required by law. We never receive your information, so we cannot provide it.</p>
+<p>We do not provide your information to third parties, except where required by law. We never receive your information, so we cannot provide it. For information the ads SDK collects directly, see section 4.</p>
 
 <h2>6. Deleting data</h2>
 <ul>
