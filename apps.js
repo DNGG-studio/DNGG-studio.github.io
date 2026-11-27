@@ -34,8 +34,8 @@
       }
     },
     {
-      id: 'morning-news', category: 'tool', icon: false, manual: true,
-      shots: [['1', '予定の一覧', 'Schedules'], ['2', '予定の編集', 'Edit a schedule'], ['3', '情報源の一覧', 'Sources'], ['4', 'NAS の設定', 'NAS settings']], enShots: false,
+      id: 'morning-news', category: 'tool', icon: true, manual: true,
+      shots: [['1', '次の再生と予定の一覧', 'Next playback and schedules'], ['2', '再生の画面に重ねる時計と天気', 'Clock and weather over the player'], ['3', 'NAS のフォルダの情報源', 'A NAS folder as a source'], ['4', '時計と天気の設定', 'Clock and weather settings']], enShots: true,
       name: { ja: 'おはようニュースタイマー', en: 'Good Morning News Timer' },
       desc: {
         ja: '決めた時刻に、ニュースの再生を自動で開始。URL の追加や NAS の動画にも対応。',
