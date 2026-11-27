@@ -26,7 +26,7 @@
     },
     {
       id: 'talking-clock', category: 'tool', icon: true, manual: true,
-      shots: [['1', 'コーギーの写真の着せ替え', 'Corgi photo theme'], ['2', 'スイーツの写真の着せ替え', 'Sweets photo theme'], ['3', '着せ替えのカテゴリー', 'Theme categories'], ['4', '設定の画面', 'Settings']], enShots: false,
+      shots: [['1', 'コーギーの写真の着せ替え', 'Corgi photo theme'], ['2', '夕日の海と針の時計', 'Ocean sunset with an analog face'], ['3', '着せ替えのカテゴリー', 'Theme categories'], ['4', '設定の画面', 'Settings']], enShots: true,
       name: { ja: 'しゃべる時計', en: 'Talking Clock' },
       desc: {
         ja: '時刻を声で知らせる時計。写真の着せ替えや今日の予定の読み上げにも対応。',
