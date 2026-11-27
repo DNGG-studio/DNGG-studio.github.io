@@ -89,7 +89,7 @@
     },
     {
       id: 'tetogravity', category: 'game', icon: true, manual: false,
-      shots: [['1', 'タイトル', 'Title'], ['2', 'とことんテトグラ', 'Endless mode'], ['3', 'お城防衛', 'Castle defense'], ['4', '木を育てよう', 'Grow a tree']], enShots: true,
+      shots: [['1', 'とことんテトグラ', 'Endless mode'], ['2', 'お城防衛', 'Castle defense'], ['3', '木を育てよう', 'Grow a tree'], ['4', '3 つのモード', '3 modes']], enShots: true,
       name: { ja: 'TETOGRAVITY（テトグラビティ）', en: 'TETOGRAVITY' },
       desc: {
         ja: '落ちてくるブロックを、空に浮かぶ島の上に積み上げる重力バランスゲーム。',
