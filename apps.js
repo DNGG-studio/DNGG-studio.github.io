@@ -61,6 +61,15 @@
       }
     },
     {
+      id: 'subscription-keeper', category: 'tool', icon: true, manual: true,
+      shots: [['1', '今月の支払いと更新が近い順の一覧', 'This month and upcoming renewals'], ['2', '1 分で入れる契約の登録', 'Add a subscription in a minute'], ['3', '1 年の見込みと 6 か月の支払い', 'The coming year and next 6 months'], ['4', '解約して減った金額', 'Money saved by cancelling']], enShots: true,
+      name: { ja: 'サブスク見張り帳', en: 'Subscription Keeper' },
+      desc: {
+        ja: 'サブスクの金額と更新日を手で入れるだけ。更新の前日に通知し、月・年の合計と節約額も分かる。',
+        en: 'Enter your subscriptions by hand and get a reminder the day before each renewal.'
+      }
+    },
+    {
       id: 'tabi-log', category: 'tool', icon: true, manual: true,
       shots: [['1', '経路と写真の地図', 'Route and photos on a map'], ['2', '旅のスライドショー', 'Trip slideshow'], ['3', 'その日の移動の全体', 'The day at a glance'], ['4', '立ち寄りと滞在時間', 'Stops and length of stay']], enShots: true,
       name: { ja: 'たびログ', en: 'TabiLog' },

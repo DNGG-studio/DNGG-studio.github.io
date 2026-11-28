@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使い方 - サブスク見張り帳（Subscription Keeper）</title>
+<meta name="description" content="サブスク見張り帳（Subscription Keeper）の使い方。画面の画像つきで、契約の登録、更新の前日の通知、合計と節約、解約と削除、設定を説明します。">
+<link rel="icon" href="images/icon.png">
+<style>
+body{font-family:sans-serif;max-width:760px;margin:24px auto;padding:0 16px;line-height:1.7;color:#222}
+h1{font-size:1.4em}h2{font-size:1.15em;margin-top:2.4em;padding-bottom:.2em;border-bottom:1px solid #ddd}h3{font-size:1em;margin-top:1.6em}
+img{max-width:100%;height:auto}
+.toc{background:#f5f7fb;border-radius:8px;padding:12px 16px 12px 36px}
+.note{font-size:.9em;color:#555}
+.tip{background:#eef5ff;border-left:4px solid #2f6fb0;padding:8px 12px;margin:12px 0}
+ol li,ul li{margin:.2em 0}
+.figs{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px}
+figure{margin:0;width:250px;max-width:100%}
+figure img{display:block;width:100%;border:1px solid #ddd;border-radius:10px}
+figcaption{font-size:.88em;color:#444;margin-top:6px;line-height:1.55}
+.n{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;border-radius:50%;background:#e53935;color:#fff;font-size:.8em;font-weight:bold;text-align:center;margin-right:2px}
+</style>
+</head>
+<body>
+<p><a href="./">サブスク見張り帳 の紹介ページへ戻る</a></p>
+<h1>サブスク見張り帳 の使い方</h1>
+<p>サブスク見張り帳（Subscription Keeper）は、契約中のサブスクの金額と次の更新日を自分で入れておくと、更新の前日に通知で知らせるアプリです。月・年の合計と、解約して減った金額も見られます。</p>
+<p class="note">この説明は バージョン 1.0.0 の画面に合わせています（2026年11月28日）。画面はこれから変わることがあります。</p>
+
+<ol class="toc">
+<li><a href="#start">はじめに</a></li>
+<li><a href="#add">契約を登録する</a></li>
+<li><a href="#list">一覧を見る・直す</a></li>
+<li><a href="#notify">更新の前日の通知</a></li>
+<li><a href="#totals">合計と節約</a></li>
+<li><a href="#cancel">解約した・削除する</a></li>
+<li><a href="#settings">設定</a></li>
+<li><a href="#faq">よくある質問</a></li>
+</ol>
+
+<h2 id="start">1. はじめに</h2>
+<ol>
+<li>アプリを開くと「契約」の画面が出ます。下の「契約」「合計」「設定」で画面を切り替えます</li>
+<li>はじめて契約を保存したとき（Android 13 以上）、通知の許可を聞かれます。前日に知らせるために「許可」を押します</li>
+</ol>
+<div class="tip">アカウントの登録もインターネットも要りません。入れた情報はこの端末の中だけに保存されます。</div>
+
+<h2 id="add">2. 契約を登録する</h2>
+<div class="figs">
+<figure><img src="images/manual/add-1.jpg" width="540" height="1200" loading="lazy" alt="まだ契約がない「契約」の画面"><figcaption><span class="n">1</span>下の「＋ 契約を追加」を押します</figcaption></figure>
+<figure><img src="images/manual/add-2.jpg" width="540" height="1200" loading="lazy" alt="契約を追加の画面"><figcaption><span class="n">1</span>名前 <span class="n">2</span>1 回の金額 <span class="n">3</span>支払いの周期 <span class="n">4</span>次の更新日を「変える」 <span class="n">5</span>最後に「保存」</figcaption></figure>
+<figure><img src="images/manual/add-date.jpg" width="540" height="1200" loading="lazy" alt="日付の選択"><figcaption><span class="n">1</span>次に支払う日を押し、<span class="n">2</span>「OK」を押します</figcaption></figure>
+</div>
+<ol>
+<li>「＋ 契約を追加」を押します</li>
+<li>「名前」（例：動画見放題）と、1 回に払う「金額」（円）を入れます</li>
+<li>「支払いの周期」を「毎月」「3か月」「毎年」から選びます</li>
+<li>「次の更新日」の「変える」を押し、次に支払う日を選んで「OK」を押します</li>
+<li>必要なら「メモ（解約の手順など）」と「印の色」を入れます。「前日の 9:00 に知らせる」は、知らせが要らない契約だけ外します</li>
+<li>「保存」を押します</li>
+</ol>
+<ul>
+<li><strong>月末の契約：</strong>31 日に払う契約は、30 日までの月は月末に、31 日のある月はまた 31 日になります。2 月 29 日の年払いは、うるう年でない年は 2 月 28 日になります</li>
+<li>過ぎた日を選んだときは、保存するときに今日より後の更新日まで進めます</li>
+<li>更新日が過ぎると、周期の分だけ自動で次の更新日に進みます</li>
+</ul>
+
+<h2 id="list">3. 一覧を見る・直す</h2>
+<div class="figs">
+<figure><img src="images/manual/list.jpg" width="540" height="1200" loading="lazy" alt="契約の一覧"><figcaption><span class="n">1</span>今月の支払い・月あたり・1 年の合計 <span class="n">2</span>契約を押すと、直す画面が開きます</figcaption></figure>
+</div>
+<ul>
+<li>上の札に、今月の支払い（今月すでに払った分も含む）と件数、月あたり、1 年での金額が出ます</li>
+<li>「もうすぐ更新」には、契約中のものが次の更新日の近い順に並びます。7 日以内のものには「あと N 日」、今日のものには「今日」の印が付きます</li>
+<li>契約を押すと「契約を編集」の画面が開きます。直したら「保存」を押します。左上の「←」で、保存せずに戻ります</li>
+</ul>
+
+<h2 id="notify">4. 更新の前日の通知</h2>
+<ul>
+<li>次の更新日の前日の 9:00 に「あすは『○○』の更新日です」と通知が届きます。続けるか、やめるかを決める目安にしてください</li>
+<li>知らせる予約は、9:00 をもう過ぎているときは、その回はしません（例：あすの更新を、今日の 9:00 より後に登録したとき）</li>
+<li>通知が届かないときは、<a href="#settings">7. 設定</a>で通知が許可されているか確かめ、「テストの通知を送る」で試してください。省電力の設定によっては、時刻が少し遅れることがあります</li>
+</ul>
+
+<h2 id="totals">5. 合計と節約</h2>
+<div class="figs">
+<figure><img src="images/manual/totals.jpg" width="540" height="1200" loading="lazy" alt="合計と節約の画面"><figcaption>1 年の見込み、これからの 6 か月の支払い、1 年の見込みの内訳</figcaption></figure>
+<figure><img src="images/manual/saved.jpg" width="540" height="1200" loading="lazy" alt="解約して減った金額と解約した契約"><figcaption><span class="n">1</span>解約して減った金額 <span class="n">2</span>「戻す」で契約中に戻せます</figcaption></figure>
+</div>
+<ul>
+<li><strong>1 年の見込み：</strong>契約中のものを 1 年続けたときの金額と、月あたりの金額</li>
+<li><strong>これからの 6 か月の支払い：</strong>月ごとの支払いの棒グラフ。今月は色が変わります</li>
+<li><strong>1 年の見込みの内訳：</strong>金額の大きい順。多いときは「そのほか」にまとめます</li>
+<li><strong>解約して減った金額：</strong>解約した後に来るはずだった更新日の金額の合計。今年解約した件数と、年末までと 1 年あたりの節約も出ます</li>
+</ul>
+
+<h2 id="cancel">6. 解約した・削除する</h2>
+<div class="figs">
+<figure><img src="images/manual/cancel.jpg" width="540" height="1200" loading="lazy" alt="契約を編集の画面の下"><figcaption><span class="n">1</span>解約した <span class="n">2</span>削除</figcaption></figure>
+</div>
+<ol>
+<li>一覧で契約を押して「契約を編集」の画面を開きます</li>
+<li>サービスを解約したら「解約した」を押します。一覧から外れて「合計」の画面の「解約した契約」に移り、節約できた金額に足されます</li>
+<li>間違えて登録した記録を消すときは「削除」を押し、確かめの画面で「削除」を押します</li>
+</ol>
+<ul>
+<li>「解約した」はアプリの中の記録だけです。サービスの解約は、そのサービスのサイトやアプリで行ってください（解約の手順をメモに残しておくと便利です）</li>
+<li>「解約した契約」の「戻す」を押すと、契約中に戻ります</li>
+</ul>
+
+<h2 id="settings">7. 設定</h2>
+<div class="figs">
+<figure><img src="images/manual/settings.jpg" width="540" height="1200" loading="lazy" alt="設定の画面"><figcaption><span class="n">1</span>テストの通知を送る <span class="n">2</span>プライバシーポリシー <span class="n">3</span>使い方のページ（このページ）</figcaption></figure>
+</div>
+<ul>
+<li><strong>更新の通知：</strong>通知が許可されているかが出ます。許可されていないときは「通知を許可する」か「通知の設定を開く」を押します。「テストの通知を送る」で、届き方を確かめられます</li>
+<li><strong>データの扱い：</strong>プライバシーポリシーと、この使い方のページを開けます</li>
+<li>いちばん下に、アプリのバージョンが出ます</li>
+</ul>
+
+<h2 id="faq">8. よくある質問</h2>
+<h3>カードの明細やメールから自動で読み取れますか？</h3>
+<p>いいえ。SMS・メール・ほかのアプリの通知は読みません。金額と日付は自分で入れてください。そのぶん、ほかの情報を見られる心配がありません。</p>
+<h3>データはどこに保存されますか？</h3>
+<p>この端末の中だけです。運営者のサーバーには送りません。アプリを削除すると消えます。機種変更のときは、Android のバックアップ（Google アカウントへのバックアップ）をオンにしていれば、引き継がれることがあります。</p>
+<h3>金額が変わったときは？</h3>
+<p>一覧で契約を押し、「金額」を直して「保存」を押してください。</p>
+<h3>全部消したいときは？</h3>
+<p>アプリを削除するか、端末の設定でアプリのデータを消去してください。</p>
+<p>詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<h2>お問い合わせ</h2>
+<p>DNGG-studio：<a href="mailto:dngg.studio@gmail.com">dngg.studio@gmail.com</a></p>
+
+<section class="dngg-apps" data-mode="others" data-current="subscription-keeper" data-lang="ja">
+<p><a href="../">DNGG-studio のアプリ一覧</a></p>
+</section>
+<script src="../apps.js" defer></script>
+</body>
+</html>
