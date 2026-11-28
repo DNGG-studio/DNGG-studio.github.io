@@ -54,7 +54,7 @@
     {
       id: 'photo-privacy-share', category: 'tool', icon: true, manual: true,
       shots: [['1', 'はじめの画面', 'Home'], ['2', '位置情報のある写真に赤い札', 'Red badges on photos with location'], ['3', '入っている情報を危ない順に', 'Hidden info, most sensitive first'], ['4', '消した項目にチェック', 'Checks for removed info']], enShots: true,
-      name: { ja: '位置情報消し共有', en: 'Photo Privacy Share' },
+      name: { ja: '写真の撮影情報削除', en: 'Photo Info Remover' },
       desc: {
         ja: '写真の撮影地・日時・機種を確かめて、消した写しをそのまま共有。写真の権限なし。',
         en: 'See the location, date and device hidden in photos, and share clean copies.'
